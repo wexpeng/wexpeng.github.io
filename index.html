@@ -415,7 +415,7 @@ daovoice('update');
                 
 
                 <span title="字数统计">
-                  357 字
+                  2,557 字
                 </span>
               
 
@@ -446,8 +446,21 @@ daovoice('update');
       
         
           <p>昨天重装了系统，配置了许多细枝末节，终于到了vim。</p>
-<p>话不多说，直接上配置：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"显示行号</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"语法高亮</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"使用vim的键盘模式</span></span><br><span class="line"><span class="comment">"set nocompatible</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"不需要备份</span></span><br><span class="line"><span class="comment">"set nobackup</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"没有保存或文件只读时弹出确认</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">confirm</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"鼠标可用</span></span><br><span class="line"><span class="keyword">set</span> mouse=<span class="keyword">a</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"背景色</span></span><br><span class="line"><span class="keyword">set</span> background=dark</span><br><span class="line"></span><br><span class="line"><span class="comment">"文件自动检测外部更改</span></span><br><span class="line"><span class="keyword">set</span> autoread</span><br><span class="line"></span><br><span class="line"><span class="comment">"自动对齐</span></span><br><span class="line"><span class="keyword">set</span> autoindent</span><br><span class="line"></span><br><span class="line"><span class="comment">"智能缩进</span></span><br><span class="line"><span class="keyword">set</span> smartindent</span><br><span class="line"></span><br><span class="line"><span class="comment">"高亮查找匹配</span></span><br><span class="line"><span class="keyword">set</span> hlsearch</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示匹配</span></span><br><span class="line"><span class="keyword">set</span> showmatch</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示标尺，就是在右下角显示光标位置</span></span><br><span class="line"><span class="keyword">set</span> ruler</span><br><span class="line"></span><br><span class="line"><span class="comment">"不要闪烁</span></span><br><span class="line"><span class="keyword">set</span> novisualbell</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示输入的命令</span></span><br><span class="line"><span class="keyword">set</span> showcmd</span><br><span class="line"></span><br><span class="line"><span class="comment">"tab缩进</span></span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> expandtab</span><br><span class="line"><span class="keyword">set</span> smarttab</span><br></pre></td></tr></table></figure>
+<h2 id="vim-基础操作"><a href="#vim-基础操作" class="headerlink" title="vim 基础操作"></a>vim 基础操作</h2><p>命令模式下常用命令：</p>
+<h3 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h3><blockquote>
+<p><code>k\j\h\l</code>:与<code>上\下\左\右</code>功能键一一对应且兼容<br><code>w</code>:上一个单词<br><code>b</code>:下一个单词<br><code>e</code>:单词尾部<br><code>gg</code>:回到顶部<br><code>G</code>:去文档最底部<br><code>Ctrl+f</code>:上一页<br><code>Ctrl+b</code>:下一页<br><code>:130</code>:跳转到第130行<br><code>0</code>:移动到行首<br><code>$</code>:移动到行尾<br><code>/word</code>：查找word的位置</p>
+</blockquote>
+<h3 id="文字编辑"><a href="#文字编辑" class="headerlink" title="文字编辑"></a>文字编辑</h3><blockquote>
+<p><code>i</code>:在光标前插入<br><code>a</code>:在光标后插入<br><code>o</code>:在下一行插入<br><code>r</code>:替换一个字符<br><code>x</code>:删掉一个字符<br><code>cw</code>:替换一个单词<br><code>yy</code>:复制一行，（在前面输入数字，比如100yy，就是复制以下100行）<br><code>dd</code>:删除一行，（同上）<br><code>de</code>:删除一个单词<br><code>p</code>:粘贴<br><code>v</code>:选择范围，（使用y复制、x剪切、p粘贴,或者r替换）<br><code>u</code>:撤销<br><code>:r!date</code>:插入日期，<code>:r</code>是<code>:read</code>的缩写，！是表面要运行一个shell命令，意思是把shell命令的输入读到当前文档里面来，这样我们可以用<code>:r!cat otherfilename</code>把另一个文件传进来<br><code>:w</code>:保存<br><code>:q</code>:退出<br><code>Ctrl+w q</code>:保存并退<br><code>Ctrl+n</code>:自动补全，写代码非常好用，同时还有<code>Ctrl+p</code></p>
+</blockquote>
+<h2 id="vim-高级操作"><a href="#vim-高级操作" class="headerlink" title="vim 高级操作"></a>vim 高级操作</h2><h3 id="查找替换"><a href="#查找替换" class="headerlink" title="查找替换"></a>查找替换</h3><blockquote>
+<p><code>:s/old/new</code> :当前行的第一个old替换为new<br><code>:s/old/new/g</code> :当前行的所有old替换为new<br><code>:100,200s/old/new/g</code> :替换第100行到200行的old为new<br><code>:%s/old/new/g</code> : 替换全文的old为new</p>
+</blockquote>
+<p><strong>注意</strong>全部没有空格</p>
+<h3 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h3><p>分屏最好用的地方在于多文件编辑，我们可以输入<code>:E</code>来打开一个窗口选择当前目录多文件。也可以直接用下面的命令打开一个文件。</p>
+<blockquote>
+<p><code>:sp filename</code>:上下分屏(Ctrl+w s)<br><code>:vsp filename</code>:左右分屏(Ctrl+w v) <strong>提示</strong>：可以多次分屏<br><code>Ctrl+w k\j\h\l</code>:输入Ctrl+w后再输入上下左右即可切换编辑的文件,kjhl和上下左右键的功能一致<br><code>Ctrl+w +</code>:增加高度<br><code>Ctrl+w -</code>:减少高度<br><code>Ctrl+w =</code>:恢复默认</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/vim的基本配置/#more" rel="contents">
@@ -605,7 +618,7 @@ daovoice('update');
                 
 
                 <span title="字数统计">
-                  52 字
+                  134 字
                 </span>
               
 
@@ -635,11 +648,10 @@ daovoice('update');
 
       
         
-          <p>我也没想到苹果电脑怎么良心，可以直接恢复到未拆封的系统状态。</p>
-<p>手机就惨了，没几天就锁死了老系统了。</p>
-<p>具体操作如下：</p>
-<p>开始</p>
-<p>## </p>
+          <p>我也没想到苹果电脑良心，可以直接恢复系统到出厂状态。</p>
+<p>在开机的时候同时按住<code>control++shift+optin+command+r</code>，会联网打开Apple Rec,直接在里面抹去磁盘，再点击安装就可以在线下载系统安装了，我100M的宽带用了一个半小时。</p>
+<p>之后，发现老系统看起来不爽，还是新的好。</p>
+<p>开机的时候同时按住<code>command+r</code>,会联网打开最新的Apple Rec，抹掉、安装。时间一样。记录一下。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Macbook恢复出厂设置/#more" rel="contents">
@@ -1573,7 +1585,7 @@ daovoice('update');
                 
 
                 <span title="字数统计">
-                  85 字
+                  79 字
                 </span>
               
 
@@ -1933,7 +1945,7 @@ daovoice('update');
                 
 
                 <span title="字数统计">
-                  190 字
+                  220 字
                 </span>
               
 
@@ -2347,7 +2359,7 @@ daovoice('update');
     
       <span class="post-meta-item-text">全站一共有：&#58;</span>
     
-    <span title="全站一共有：">11006 字</span>
+    <span title="全站一共有：">13312 字</span>
   
 </div>
 
