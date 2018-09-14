@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[大数据学习计划]]></title>
+    <url>%2F%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%2F</url>
+    <content type="text"><![CDATA[大数据（Big Data）简介 Linux 课程认识linux如何使用虚拟化（vmware，vbox）安装linux镜像认识linux的桌面环境、shell环境在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令学习linux的网络管理,掌握ip、hostname等设置学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式学习linux的进程管理,掌握如何查看、删除进程学习linux的软件管理,掌握java、mysql等安装学习环境变量配置,掌握如何设置环境变量学习linux的ssh管理,掌握如何实现免密码登录学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口学习linux的调度管理,掌握crontab的使用HadoopHadoop概念、版本、历史Hadoop和核心组成介绍及hdfs、mapreduce体系结构Hadoop的集群结构Hadoop伪分布的详细安装步骤如何通过命令行和浏览器观察hadoopHDFS体系结构及shell、Java操作方式Hdfs体系结构详述NameNode、DataNode、SecondaryNameNode体系结构如果保证namenode的高可靠Datanode中block的划分原理和存储方式如何修改namenode、datanode数据存储位置如何使用命令行操纵hdfs如何使用java操作hdfs介绍rpc机制通过查看源码,知晓hadoop是建构在rpc之上的通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的MapReduce体系结构及各种算法Mapreduce原理Mapreduce执行的八大步骤详细讲述如何使用mapreduce实现单词计数功能详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点详细讲述hadoop的自定义类型Writable接口通过电信上网日志实例讲述如何自定义hadoop类型实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定义输入来源处理器实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,实现自定义输出文件名称通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的讲解新旧api的区别,如何使用旧api完成操作介绍如何打包成jar,在命令行运行hadoop程序介绍hadoop的内置计数器,以及自定义计数器介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用介绍了hadoop内置的排序算法,以及如何自定义排序规则介绍了hadoop内置的分组算法,以及如何自定义分组规则介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解如何优化mapreduce算法,实现更高的运行效率zookeeperZookeeper是什么搭建zookeeper集群环境如何使用命令行操作zookeeper如何使用java操作zookeeperHBasehbase的概述hbase的数据模型hbase的表设计hbase的伪分布式和集群安装hbase的shell操作hbase的JavaAPI操作hbase的数据迁移hbase的数据备份及恢复Hbase结合Hive使用hbase的集群管理hbase的性能调优]]></content>
+      <categories>
+        <category>经验</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Big Data</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux光盘挂载]]></title>
     <url>%2FLinux%E5%85%89%E7%9B%98%E6%8C%82%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[实验系统：Centos6.5_x64 测试使用光盘挂载到/media，要保证/media目录要存在，光盘要插入;光盘在Centos系统中设备名sr0，路径为/dev/sr0;挂载后，无法弹出光驱，重启，或者卸载才能弹出光驱 直接挂载12#mount /dev/sr0 /media //挂载#umount /media //卸载 开机自动挂载 使用vim修改配置文件/etc/fstab加入 1/dev/sr0 /mnt/cdrom iso9600 defaults 0 0 文件格式要写对，后面的第一个个0代表不做dump检查，还可选1，2；（详情百度）最后一个0代表不做fsck检查，一般来说，根目录设为1，其它要检测的设为2，自己信任的0，比如光盘 触发式挂载 这种方式只有当使用光驱时才会挂载，而且是自动的，挂载的目录无需自己建立。一段时间不占用这个挂载的文件夹就会自动卸载（umount），不占用系统资源！需要安装autofs服务，使用yum安装（autofs服务）配置文件：vim编辑 /etc/auto.master文件，加入：1/media /etc/auto.yum #这句话的意思是，在auto.yum文件中配置vim编辑/etc/auto.yum文件，( 在auto.master文件中定义的文件名），加入 1sr0 -fstype=iso9660 /dev/sr0 #这个会在media目录下自动生成一个sr0的目录作为挂载目录既然是服务就需要启动 12#etc/init.d/autofs start#chkconfig sutofs on // 开机自启 挂载远程资源 1mount -o username=Administrator(everyone) //windowsIPaddress/共享名 /media 这样就可以把Windows电脑共享的目录挂载到Linux的/media目录下，非常方便]]></content>
@@ -10,28 +22,6 @@
       <tags>
         <tag>技术</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[实验系统：Centos6.5_x64]]></title>
-    <url>%2F%E5%AE%9E%E9%AA%8C%E7%B3%BB%E7%BB%9F%EF%BC%9ACentos6-5-x64%2F</url>
-    <content type="text"><![CDATA[## ## ##]]></content>
-      <categories>
-        <category>少年</category>
-        <category>阅历</category>
-        <category>经验</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>技术</tag>
-        <tag>Linux</tag>
-        <tag>Macbook</tag>
-        <tag>不能说的秘密</tag>
-        <tag>影评</tag>
-        <tag>文学</tag>
-        <tag>Windows</tag>
-        <tag>java</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -117,7 +107,7 @@
   <entry>
     <title><![CDATA[世界你好，Jan你好]]></title>
     <url>%2F%E4%B8%96%E7%95%8C%E4%BD%A0%E5%A5%BD%EF%BC%8CJan%E4%BD%A0%E5%A5%BD%2F</url>
-    <content type="text"><![CDATA[加密文档Decrypt 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]]></content>
+    <content type="text"><![CDATA[加密文档Decrypt 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]]></content>
       <categories>
         <category>少年</category>
       </categories>
@@ -182,7 +172,7 @@
   <entry>
     <title><![CDATA[神说要有光，于是有了我]]></title>
     <url>%2F%E7%A5%9E%E8%AF%B4%E8%A6%81%E6%9C%89%E5%85%89%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%9C%89%E4%BA%86%E6%88%91%2F</url>
-    <content type="text"><![CDATA[在我过去短暂的生命中，并不太平，但我很高兴，那些平与不平的事情，才构成了现在的我。并非我如今有多好，实际上兴还不如当年，我开心的是，我知道自己作为一个灵长类动物于其它动物的区别，说的直白的，我知道什么是一个人。这足以让我开心到死那一天。 尤瑟纳尔女士借阿德里安之口说：当一个人写作或者计算时，就超越了性别，甚至超越了人类——当你写作和计算时，就是在思索，思索是人类的前途所系，故此，思索的人，超越了现世的人类。这句话讲得是非常之好的，只是讲的过于简单，并不是每一种写作和计算都可以超越人类。这种情况并不多见。不过我总是可以自己进行一场意淫，因为实际上这些太浪漫的事情并不应该属于我，我的理想是一个文学家，研究自己喜欢的书，看自己喜欢的漫画，等时机成熟了，写一些“传世之作”也算没白来一趟。这种愿望是很奢侈的，并非所有人都有如此幸运。 王小波当年下乡做知青，异常苦闷，但他很幸运，早早懂了如何调戏生活。这个时候好好想想，我们没有战争，没有政治洗脑，一日三餐无忧，每天干净的水洗脸，这多好呀。我否认这是一种简单的阿Q精神，这确实是幸福的。 我见识过许多人的生活，明白了人与人的差距其实是与生俱来的。有的人会站工厂前思考劳动力密集产业如何转型才能适应社会的发展，有的人扎在流水线日复一日，年复一年。没有人值得同情，也没有人值得羡慕，作为俗人，我们可以尽量活的体面一些，愉快一些。但我作为神的执笔人，就不这样想了。 从这个时候起，我开始刻意的追求金钱。和我的一些女性朋友讲：如果你害怕别人说你拜金而拒绝有钱人的追求，就是蠢到家了，你怎么能直接否认他有钱的外表下还有一颗智慧的心？她笑着说，我喜欢帅的。 倒也不错。 在我看来，财富很大程度上上可以代表一个人的智慧和运气。有钱也是一种优秀啊，假如大家都差不多的人品，干嘛不选有钱的，人品是很难看到的。男女都一样，如果有个超级有钱的大小姐爱上我，我并不会因为害怕别人说我吃软饭而拒绝她，我也会喜欢她的（这里要手动狗头）。而其实，在金钱上面，我是个彻头彻尾的穷人。要在几年前，谁要爱上我的话，我会说：我先养好我自己吧。那我干啥对富人抱有这么大好感？ 只是明白：在大的概率面前，富人的涵养比穷人要好得多。他们光是活着，就竭尽全力了。 当然还有一个原因是我告诉自己：哎，彭伟轩是一方豪杰，家财万贯，开私人飞机，有豪华游艇。这样的念头多了，我也就真的相信了，这不是坏事，相反，金钱反而真的成了个工具，好像真的有那些钱似的。有朋友喊我屌丝，但我从不自称。自称屌丝、矮穷矬的男生，我相信都不是真心的，（不过我矮是真的），如果有的选，大部分男生都愿意想象自己是登高一呼的英雄侠客，再不济，也是个腹黑凶猛的反派。不能打酱油，不能当配角。别人叫我屌丝那是客观分析，我不能反驳，但我自己称呼自己，那就是装逼了。自嘲没意思，提前自我保护那更不需要。我担心的是，会不会自信过头，以为财富自由是一件很简单的事情。社会上仇富的人太多了，我先做个楷模。仇富的多，也印证了这个国家的穷人多。 当然，那是很难的。 这也是一个曲折的办法，只有有一天我不用工作也能养活我几生，才能完美的去过自己想要的生活。 比如：写几本小说。 有目标后我就很开心了。不论做什么都很开心。因为我在思索，思索是人类的第一要务，是人类的前途所系。 想起一位科幻作家的话：我很遗憾，在将要死去的时候，才发现了思考的乐趣。我相信那些孤守在灯塔上的人不会疯狂，因为他们是思想者。但唯一不公平的是，他们的每一天都是不同的。]]></content>
+    <content type="text"><![CDATA[在我过去短暂的生命中，可以用崎岖坎坷来形容，但我很开心，那些平与不平的事情，才构成了现在的我。并非如今有多出色，我仅仅是可以用旁观者角色来感受自己的喜怒哀乐，对自己的欲望保持绝对的冷静，这让我隐约明白活着的意义。 尤瑟纳尔女士借阿德里安之口说：当一个人写作或者计算时，就超越了性别，甚至超越了人类——当你写作和计算时，就是在思索，思索是人类的前途所系，故此，思索的人，超越了现世的人类。这句话讲得是非常之好的，只是讲的过于简单，并不是每一种写作和计算都可以超越人类。这种情况并不多见。不过我总是可以自己进行一场意淫，因为实际上这些太浪漫的事情并不属于我，我的理想是一个文学家，研究自己喜欢的书，看自己喜欢的漫画，等时机成熟了，写一些“传世之作”。这种愿望是很奢侈的，并非所有人都有如此幸运。 有时候想天上忽明忽暗的云，想自己硕大的阴茎，这些流氓气息是不外表露的。也是和别人学来的。王小波当年下乡做知青，异常苦闷，但他很幸运，早早懂了如何调戏生活。这个时候好好想想，我们没有战争，没有政治洗脑，一日三餐无忧，每天干净的水洗脸，这多好呀。我否认这是一种简单的阿Q精神，这确实是幸福的。 我见识过许多人的生活，明白了人与人的差距其实是与生俱来的。有的人会站工厂前思考劳动力密集产业如何转型才能适应社会的发展，有的人扎在流水线日复一日，年复一年。没有人值得同情，也没有人值得羡慕，作为俗人，我们可以尽量活的体面一些，愉快一些。但我作为神的执笔人，就不这样想了。 从这个时候起，我开始刻意的追求金钱。和我的一些女性朋友讲：如果你害怕别人说你拜金而拒绝有钱人的追求，就是蠢到家了，你怎么能直接否认他有钱的外表下还有一颗智慧的心？她笑着说，我喜欢帅的。 倒也不错。 在我看来，财富很大程度上上可以代表一个人的智慧和运气。有钱也是一种优秀啊，假如大家都差不多的人品，干嘛不选有钱的，人品是很难看到的。男女都一样，如果有个超级有钱的大小姐爱上我，我并不会因为害怕别人说我吃软饭而拒绝她，我也会喜欢她的（这里要手动狗头）。而其实，在金钱上面，我是个彻头彻尾的穷人。要在几年前，谁要爱上我的话，我会说：我先养好我自己吧。那我干啥对富人抱有这么大好感？ 只是明白：在大的概率面前，富人的涵养比穷人要好得多。他们光是活着，就竭尽全力了。 当然还有一个原因是我告诉自己：哎，彭伟轩是一方豪杰，家财万贯，开私人飞机，有豪华游艇。这样的念头多了，我也就真的相信了，这不是坏事，相反，金钱反而真的成了个工具，好像真的有那些钱似的。有朋友喊我屌丝，但我从不自称。自称屌丝、矮穷矬的男生，我相信都不是真心的，（不过我矮是真的），如果有的选，大部分男生都愿意想象自己是登高一呼的英雄侠客，再不济，也是个腹黑凶猛的反派。不能打酱油，不能当配角。别人叫我屌丝那是客观分析，我不能反驳，但我自己称呼自己，那就是装逼了。自嘲没意思，提前自我保护那更不需要。我担心的是，会不会自信过头，以为财富自由是一件很简单的事情。社会上仇富的人太多了，我先做个楷模。仇富的多，也印证了这个国家的穷人多。 当然，那是很难的。 这也是一个曲折的办法，只有有一天我不用工作也能养活我几生，才能完美的去过自己想要的生活。 比如：写几本小说。 有目标后我就很开心了。不论做什么都很开心。因为我在思索，思索是人类的第一要务，是人类的前途所系。 想起一位科幻作家的话：我很遗憾，在将要死去的时候，才发现了思考的乐趣。我相信那些孤守在灯塔上的人不会疯狂，因为他们是思想者。但唯一不公平的是，他们的每一天都是不同的。]]></content>
       <categories>
         <category>少年</category>
       </categories>

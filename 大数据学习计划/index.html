@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="技术,Big Data," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="大数据（Big Data）简介">
+<meta name="keywords" content="技术,Big Data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大数据学习计划">
+<meta property="og:url" content="http://we.hewozou.me/大数据学习计划/index.html">
+<meta property="og:site_name" content="神的笔记">
+<meta property="og:description" content="大数据（Big Data）简介">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-14T02:32:21.133Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大数据学习计划">
+<meta name="twitter:description" content="大数据（Big Data）简介">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":14,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '彭伟轩'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://we.hewozou.me/大数据学习计划/"/>
+
+
+
+
+
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/a35e83d2.js","daovoice")
+daovoice('init', {
+  app_id: "a35e83d2",
+});
+daovoice('update');
+</script>
+
+  <title>大数据学习计划 | 神的笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">神的笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Wexpeng's Notebook</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于执笔人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-messages">
+          <a href="/messages/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://we.hewozou.me/大数据学习计划/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彭伟轩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神的笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">大数据学习计划</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T09:51:48+08:00">
+                2018-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/大数据学习计划/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/大数据学习计划/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                
+                  <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+
+                <span title="字数统计">
+                  896 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+          
+
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+    <div class="post-body" itemprop="articleBody"> 
+
+      
+      
+
+      
+        <h2 id="大数据（Big-Data）简介"><a href="#大数据（Big-Data）简介" class="headerlink" title="大数据（Big Data）简介"></a>大数据（Big Data）简介</h2><a id="more"></a>
+<h2 id="Linux-课程"><a href="#Linux-课程" class="headerlink" title="Linux 课程"></a>Linux 课程</h2><h3 id="认识linux"><a href="#认识linux" class="headerlink" title="认识linux"></a>认识linux</h3><h3 id="如何使用虚拟化（vmware，vbox）安装linux镜像"><a href="#如何使用虚拟化（vmware，vbox）安装linux镜像" class="headerlink" title="如何使用虚拟化（vmware，vbox）安装linux镜像"></a>如何使用虚拟化（vmware，vbox）安装linux镜像</h3><h3 id="认识linux的桌面环境、shell环境"><a href="#认识linux的桌面环境、shell环境" class="headerlink" title="认识linux的桌面环境、shell环境"></a>认识linux的桌面环境、shell环境</h3><h3 id="在shell环境下进行文件系统的操作-掌握more、touch、cp、mv、rm等20多个常用命令"><a href="#在shell环境下进行文件系统的操作-掌握more、touch、cp、mv、rm等20多个常用命令" class="headerlink" title="在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令"></a>在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令</h3><h3 id="学习linux的网络管理-掌握ip、hostname等设置"><a href="#学习linux的网络管理-掌握ip、hostname等设置" class="headerlink" title="学习linux的网络管理,掌握ip、hostname等设置"></a>学习linux的网络管理,掌握ip、hostname等设置</h3><h3 id="学习虚拟化（vmware，vbox）与linux的通信设置-掌握如何实现host-only、bridge、nat等网络连接方式"><a href="#学习虚拟化（vmware，vbox）与linux的通信设置-掌握如何实现host-only、bridge、nat等网络连接方式" class="headerlink" title="学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式"></a>学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式</h3><h3 id="学习linux的进程管理-掌握如何查看、删除进程"><a href="#学习linux的进程管理-掌握如何查看、删除进程" class="headerlink" title="学习linux的进程管理,掌握如何查看、删除进程"></a>学习linux的进程管理,掌握如何查看、删除进程</h3><h3 id="学习linux的软件管理-掌握java、mysql等安装"><a href="#学习linux的软件管理-掌握java、mysql等安装" class="headerlink" title="学习linux的软件管理,掌握java、mysql等安装"></a>学习linux的软件管理,掌握java、mysql等安装</h3><h3 id="学习环境变量配置-掌握如何设置环境变量"><a href="#学习环境变量配置-掌握如何设置环境变量" class="headerlink" title="学习环境变量配置,掌握如何设置环境变量"></a>学习环境变量配置,掌握如何设置环境变量</h3><h3 id="学习linux的ssh管理-掌握如何实现免密码登录"><a href="#学习linux的ssh管理-掌握如何实现免密码登录" class="headerlink" title="学习linux的ssh管理,掌握如何实现免密码登录"></a>学习linux的ssh管理,掌握如何实现免密码登录</h3><h3 id="学习linux的防火墙管理-掌握如何关闭防火墙及开放指定端口"><a href="#学习linux的防火墙管理-掌握如何关闭防火墙及开放指定端口" class="headerlink" title="学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口"></a>学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口</h3><h3 id="学习linux的调度管理-掌握crontab的使用"><a href="#学习linux的调度管理-掌握crontab的使用" class="headerlink" title="学习linux的调度管理,掌握crontab的使用"></a>学习linux的调度管理,掌握crontab的使用</h3><h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><h3 id="Hadoop概念、版本、历史"><a href="#Hadoop概念、版本、历史" class="headerlink" title="Hadoop概念、版本、历史"></a>Hadoop概念、版本、历史</h3><h3 id="Hadoop和核心组成介绍及hdfs、mapreduce体系结构"><a href="#Hadoop和核心组成介绍及hdfs、mapreduce体系结构" class="headerlink" title="Hadoop和核心组成介绍及hdfs、mapreduce体系结构"></a>Hadoop和核心组成介绍及hdfs、mapreduce体系结构</h3><h3 id="Hadoop的集群结构"><a href="#Hadoop的集群结构" class="headerlink" title="Hadoop的集群结构"></a>Hadoop的集群结构</h3><h3 id="Hadoop伪分布的详细安装步骤"><a href="#Hadoop伪分布的详细安装步骤" class="headerlink" title="Hadoop伪分布的详细安装步骤"></a>Hadoop伪分布的详细安装步骤</h3><h3 id="如何通过命令行和浏览器观察hadoop"><a href="#如何通过命令行和浏览器观察hadoop" class="headerlink" title="如何通过命令行和浏览器观察hadoop"></a>如何通过命令行和浏览器观察hadoop</h3><h2 id="HDFS体系结构及shell、Java操作方式"><a href="#HDFS体系结构及shell、Java操作方式" class="headerlink" title="HDFS体系结构及shell、Java操作方式"></a>HDFS体系结构及shell、Java操作方式</h2><h3 id="Hdfs体系结构详述"><a href="#Hdfs体系结构详述" class="headerlink" title="Hdfs体系结构详述"></a>Hdfs体系结构详述</h3><h3 id="NameNode、DataNode、SecondaryNameNode体系结构"><a href="#NameNode、DataNode、SecondaryNameNode体系结构" class="headerlink" title="NameNode、DataNode、SecondaryNameNode体系结构"></a>NameNode、DataNode、SecondaryNameNode体系结构</h3><h3 id="如果保证namenode的高可靠"><a href="#如果保证namenode的高可靠" class="headerlink" title="如果保证namenode的高可靠"></a>如果保证namenode的高可靠</h3><h3 id="Datanode中block的划分原理和存储方式"><a href="#Datanode中block的划分原理和存储方式" class="headerlink" title="Datanode中block的划分原理和存储方式"></a>Datanode中block的划分原理和存储方式</h3><h3 id="如何修改namenode、datanode数据存储位置"><a href="#如何修改namenode、datanode数据存储位置" class="headerlink" title="如何修改namenode、datanode数据存储位置"></a>如何修改namenode、datanode数据存储位置</h3><h3 id="如何使用命令行操纵hdfs"><a href="#如何使用命令行操纵hdfs" class="headerlink" title="如何使用命令行操纵hdfs"></a>如何使用命令行操纵hdfs</h3><h3 id="如何使用java操作hdfs"><a href="#如何使用java操作hdfs" class="headerlink" title="如何使用java操作hdfs"></a>如何使用java操作hdfs</h3><h3 id="介绍rpc机制"><a href="#介绍rpc机制" class="headerlink" title="介绍rpc机制"></a>介绍rpc机制</h3><h3 id="通过查看源码-知晓hadoop是建构在rpc之上的"><a href="#通过查看源码-知晓hadoop是建构在rpc之上的" class="headerlink" title="通过查看源码,知晓hadoop是建构在rpc之上的"></a>通过查看源码,知晓hadoop是建构在rpc之上的</h3><h3 id="通过查看hdfs源码-知晓客户端是如何与Namenode通过rpc通信的"><a href="#通过查看hdfs源码-知晓客户端是如何与Namenode通过rpc通信的" class="headerlink" title="通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的"></a>通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的</h3><h2 id="MapReduce体系结构及各种算法"><a href="#MapReduce体系结构及各种算法" class="headerlink" title="MapReduce体系结构及各种算法"></a>MapReduce体系结构及各种算法</h2><h3 id="Mapreduce原理"><a href="#Mapreduce原理" class="headerlink" title="Mapreduce原理"></a>Mapreduce原理</h3><h3 id="Mapreduce执行的八大步骤"><a href="#Mapreduce执行的八大步骤" class="headerlink" title="Mapreduce执行的八大步骤"></a>Mapreduce执行的八大步骤</h3><h3 id="详细讲述如何使用mapreduce实现单词计数功能"><a href="#详细讲述如何使用mapreduce实现单词计数功能" class="headerlink" title="详细讲述如何使用mapreduce实现单词计数功能"></a>详细讲述如何使用mapreduce实现单词计数功能</h3><h3 id="详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中-这是考察重点"><a href="#详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中-这是考察重点" class="headerlink" title="详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点"></a>详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点</h3><h3 id="详细讲述hadoop的自定义类型Writable接口"><a href="#详细讲述hadoop的自定义类型Writable接口" class="headerlink" title="详细讲述hadoop的自定义类型Writable接口"></a>详细讲述hadoop的自定义类型Writable接口</h3><h3 id="通过电信上网日志实例讲述如何自定义hadoop类型"><a href="#通过电信上网日志实例讲述如何自定义hadoop类型" class="headerlink" title="通过电信上网日志实例讲述如何自定义hadoop类型"></a>通过电信上网日志实例讲述如何自定义hadoop类型</h3><h3 id="实例讲述hadoop1的各种输入来源处理器-包括数据库输入、xml文件、多文件输入等-并且讲解如何自定"><a href="#实例讲述hadoop1的各种输入来源处理器-包括数据库输入、xml文件、多文件输入等-并且讲解如何自定" class="headerlink" title="实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定"></a>实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定</h3><h3 id="义输入来源处理器"><a href="#义输入来源处理器" class="headerlink" title="义输入来源处理器"></a>义输入来源处理器</h3><h3 id="实例讲述hadoop1的各种输出来源-包括数据库输出、文件输出等-并且讲解如何自定义输出来源处理器"><a href="#实例讲述hadoop1的各种输出来源-包括数据库输出、文件输出等-并且讲解如何自定义输出来源处理器" class="headerlink" title="实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,"></a>实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,</h3><h3 id="实现自定义输出文件名称"><a href="#实现自定义输出文件名称" class="headerlink" title="实现自定义输出文件名称"></a>实现自定义输出文件名称</h3><h3 id="通过源码讲述hadoop是如何读取hdfs文件-并且转化为键值对-供map方法调用的"><a href="#通过源码讲述hadoop是如何读取hdfs文件-并且转化为键值对-供map方法调用的" class="headerlink" title="通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的"></a>通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的</h3><h3 id="讲解新旧api的区别-如何使用旧api完成操作"><a href="#讲解新旧api的区别-如何使用旧api完成操作" class="headerlink" title="讲解新旧api的区别,如何使用旧api完成操作"></a>讲解新旧api的区别,如何使用旧api完成操作</h3><h3 id="介绍如何打包成jar-在命令行运行hadoop程序"><a href="#介绍如何打包成jar-在命令行运行hadoop程序" class="headerlink" title="介绍如何打包成jar,在命令行运行hadoop程序"></a>介绍如何打包成jar,在命令行运行hadoop程序</h3><h3 id="介绍hadoop的内置计数器-以及自定义计数器"><a href="#介绍hadoop的内置计数器-以及自定义计数器" class="headerlink" title="介绍hadoop的内置计数器,以及自定义计数器"></a>介绍hadoop的内置计数器,以及自定义计数器</h3><h3 id="介绍合并-combiner-概念、为什么使用、如何使用、使用时有什么限制条件"><a href="#介绍合并-combiner-概念、为什么使用、如何使用、使用时有什么限制条件" class="headerlink" title="介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件"></a>介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件</h3><h3 id="介绍了hadoop内置的分区-partitioner-概念、为什么使用、如何使用"><a href="#介绍了hadoop内置的分区-partitioner-概念、为什么使用、如何使用" class="headerlink" title="介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用"></a>介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用</h3><h3 id="介绍了hadoop内置的排序算法-以及如何自定义排序规则"><a href="#介绍了hadoop内置的排序算法-以及如何自定义排序规则" class="headerlink" title="介绍了hadoop内置的排序算法,以及如何自定义排序规则"></a>介绍了hadoop内置的排序算法,以及如何自定义排序规则</h3><h3 id="介绍了hadoop内置的分组算法-以及如何自定义分组规则"><a href="#介绍了hadoop内置的分组算法-以及如何自定义分组规则" class="headerlink" title="介绍了hadoop内置的分组算法,以及如何自定义分组规则"></a>介绍了hadoop内置的分组算法,以及如何自定义分组规则</h3><h3 id="介绍了mapreduce的常见应用场景-以及如何实现mapreduce算法讲解"><a href="#介绍了mapreduce的常见应用场景-以及如何实现mapreduce算法讲解" class="headerlink" title="介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解"></a>介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解</h3><h3 id="如何优化mapreduce算法-实现更高的运行效率"><a href="#如何优化mapreduce算法-实现更高的运行效率" class="headerlink" title="如何优化mapreduce算法,实现更高的运行效率"></a>如何优化mapreduce算法,实现更高的运行效率</h3><h2 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h2><h3 id="Zookeeper是什么"><a href="#Zookeeper是什么" class="headerlink" title="Zookeeper是什么"></a>Zookeeper是什么</h3><h3 id="搭建zookeeper集群环境"><a href="#搭建zookeeper集群环境" class="headerlink" title="搭建zookeeper集群环境"></a>搭建zookeeper集群环境</h3><h3 id="如何使用命令行操作zookeeper"><a href="#如何使用命令行操作zookeeper" class="headerlink" title="如何使用命令行操作zookeeper"></a>如何使用命令行操作zookeeper</h3><h3 id="如何使用java操作zookeeper"><a href="#如何使用java操作zookeeper" class="headerlink" title="如何使用java操作zookeeper"></a>如何使用java操作zookeeper</h3><h2 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h2><h3 id="hbase的概述"><a href="#hbase的概述" class="headerlink" title="hbase的概述"></a>hbase的概述</h3><h3 id="hbase的数据模型"><a href="#hbase的数据模型" class="headerlink" title="hbase的数据模型"></a>hbase的数据模型</h3><h3 id="hbase的表设计"><a href="#hbase的表设计" class="headerlink" title="hbase的表设计"></a>hbase的表设计</h3><h3 id="hbase的伪分布式和集群安装"><a href="#hbase的伪分布式和集群安装" class="headerlink" title="hbase的伪分布式和集群安装"></a>hbase的伪分布式和集群安装</h3><h3 id="hbase的shell操作"><a href="#hbase的shell操作" class="headerlink" title="hbase的shell操作"></a>hbase的shell操作</h3><h3 id="hbase的JavaAPI操作"><a href="#hbase的JavaAPI操作" class="headerlink" title="hbase的JavaAPI操作"></a>hbase的JavaAPI操作</h3><h3 id="hbase的数据迁移"><a href="#hbase的数据迁移" class="headerlink" title="hbase的数据迁移"></a>hbase的数据迁移</h3><h3 id="hbase的数据备份及恢复"><a href="#hbase的数据备份及恢复" class="headerlink" title="hbase的数据备份及恢复"></a>hbase的数据备份及恢复</h3><h3 id="Hbase结合Hive使用"><a href="#Hbase结合Hive使用" class="headerlink" title="Hbase结合Hive使用"></a>Hbase结合Hive使用</h3><h3 id="hbase的集群管理"><a href="#hbase的集群管理" class="headerlink" title="hbase的集群管理"></a>hbase的集群管理</h3><h3 id="hbase的性能调优"><a href="#hbase的性能调优" class="headerlink" title="hbase的性能调优"></a>hbase的性能调优</h3>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/Big-Data/" rel="tag"># Big Data</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Linux光盘挂载/" rel="next" title="Linux光盘挂载">
+                <i class="fa fa-chevron-left"></i> Linux光盘挂载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="彭伟轩" />
+            
+              <p class="site-author-name" itemprop="name">彭伟轩</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="tel:18229738322" target="_blank" title="电话">
+                      
+                        <i class="fa fa-fw fa-phone"></i>电话</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/wexoeng/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://user.qzone.qq.com/1962311496/infocenter" target="_blank" title="QQ空间">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ空间</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/user/home?id=79199600" target="_blank" title="网易音乐">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="../博客创建初心" title="博客创建初心" target="_blank">博客创建初心</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#大数据（Big-Data）简介"><span class="nav-text">大数据（Big Data）简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-课程"><span class="nav-text">Linux 课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#认识linux"><span class="nav-text">认识linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用虚拟化（vmware，vbox）安装linux镜像"><span class="nav-text">如何使用虚拟化（vmware，vbox）安装linux镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认识linux的桌面环境、shell环境"><span class="nav-text">认识linux的桌面环境、shell环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在shell环境下进行文件系统的操作-掌握more、touch、cp、mv、rm等20多个常用命令"><span class="nav-text">在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的网络管理-掌握ip、hostname等设置"><span class="nav-text">学习linux的网络管理,掌握ip、hostname等设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习虚拟化（vmware，vbox）与linux的通信设置-掌握如何实现host-only、bridge、nat等网络连接方式"><span class="nav-text">学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的进程管理-掌握如何查看、删除进程"><span class="nav-text">学习linux的进程管理,掌握如何查看、删除进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的软件管理-掌握java、mysql等安装"><span class="nav-text">学习linux的软件管理,掌握java、mysql等安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习环境变量配置-掌握如何设置环境变量"><span class="nav-text">学习环境变量配置,掌握如何设置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的ssh管理-掌握如何实现免密码登录"><span class="nav-text">学习linux的ssh管理,掌握如何实现免密码登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的防火墙管理-掌握如何关闭防火墙及开放指定端口"><span class="nav-text">学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的调度管理-掌握crontab的使用"><span class="nav-text">学习linux的调度管理,掌握crontab的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadoop"><span class="nav-text">Hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop概念、版本、历史"><span class="nav-text">Hadoop概念、版本、历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop和核心组成介绍及hdfs、mapreduce体系结构"><span class="nav-text">Hadoop和核心组成介绍及hdfs、mapreduce体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop的集群结构"><span class="nav-text">Hadoop的集群结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop伪分布的详细安装步骤"><span class="nav-text">Hadoop伪分布的详细安装步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何通过命令行和浏览器观察hadoop"><span class="nav-text">如何通过命令行和浏览器观察hadoop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDFS体系结构及shell、Java操作方式"><span class="nav-text">HDFS体系结构及shell、Java操作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hdfs体系结构详述"><span class="nav-text">Hdfs体系结构详述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NameNode、DataNode、SecondaryNameNode体系结构"><span class="nav-text">NameNode、DataNode、SecondaryNameNode体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果保证namenode的高可靠"><span class="nav-text">如果保证namenode的高可靠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Datanode中block的划分原理和存储方式"><span class="nav-text">Datanode中block的划分原理和存储方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何修改namenode、datanode数据存储位置"><span class="nav-text">如何修改namenode、datanode数据存储位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用命令行操纵hdfs"><span class="nav-text">如何使用命令行操纵hdfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用java操作hdfs"><span class="nav-text">如何使用java操作hdfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍rpc机制"><span class="nav-text">介绍rpc机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过查看源码-知晓hadoop是建构在rpc之上的"><span class="nav-text">通过查看源码,知晓hadoop是建构在rpc之上的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过查看hdfs源码-知晓客户端是如何与Namenode通过rpc通信的"><span class="nav-text">通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce体系结构及各种算法"><span class="nav-text">MapReduce体系结构及各种算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mapreduce原理"><span class="nav-text">Mapreduce原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mapreduce执行的八大步骤"><span class="nav-text">Mapreduce执行的八大步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲述如何使用mapreduce实现单词计数功能"><span class="nav-text">详细讲述如何使用mapreduce实现单词计数功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中-这是考察重点"><span class="nav-text">详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲述hadoop的自定义类型Writable接口"><span class="nav-text">详细讲述hadoop的自定义类型Writable接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过电信上网日志实例讲述如何自定义hadoop类型"><span class="nav-text">通过电信上网日志实例讲述如何自定义hadoop类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例讲述hadoop1的各种输入来源处理器-包括数据库输入、xml文件、多文件输入等-并且讲解如何自定"><span class="nav-text">实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#义输入来源处理器"><span class="nav-text">义输入来源处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例讲述hadoop1的各种输出来源-包括数据库输出、文件输出等-并且讲解如何自定义输出来源处理器"><span class="nav-text">实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现自定义输出文件名称"><span class="nav-text">实现自定义输出文件名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过源码讲述hadoop是如何读取hdfs文件-并且转化为键值对-供map方法调用的"><span class="nav-text">通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲解新旧api的区别-如何使用旧api完成操作"><span class="nav-text">讲解新旧api的区别,如何使用旧api完成操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍如何打包成jar-在命令行运行hadoop程序"><span class="nav-text">介绍如何打包成jar,在命令行运行hadoop程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍hadoop的内置计数器-以及自定义计数器"><span class="nav-text">介绍hadoop的内置计数器,以及自定义计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍合并-combiner-概念、为什么使用、如何使用、使用时有什么限制条件"><span class="nav-text">介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了hadoop内置的分区-partitioner-概念、为什么使用、如何使用"><span class="nav-text">介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了hadoop内置的排序算法-以及如何自定义排序规则"><span class="nav-text">介绍了hadoop内置的排序算法,以及如何自定义排序规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了hadoop内置的分组算法-以及如何自定义分组规则"><span class="nav-text">介绍了hadoop内置的分组算法,以及如何自定义分组规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了mapreduce的常见应用场景-以及如何实现mapreduce算法讲解"><span class="nav-text">介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何优化mapreduce算法-实现更高的运行效率"><span class="nav-text">如何优化mapreduce算法,实现更高的运行效率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zookeeper"><span class="nav-text">zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Zookeeper是什么"><span class="nav-text">Zookeeper是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建zookeeper集群环境"><span class="nav-text">搭建zookeeper集群环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用命令行操作zookeeper"><span class="nav-text">如何使用命令行操作zookeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用java操作zookeeper"><span class="nav-text">如何使用java操作zookeeper</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HBase"><span class="nav-text">HBase</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的概述"><span class="nav-text">hbase的概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的数据模型"><span class="nav-text">hbase的数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的表设计"><span class="nav-text">hbase的表设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的伪分布式和集群安装"><span class="nav-text">hbase的伪分布式和集群安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的shell操作"><span class="nav-text">hbase的shell操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的JavaAPI操作"><span class="nav-text">hbase的JavaAPI操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的数据迁移"><span class="nav-text">hbase的数据迁移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的数据备份及恢复"><span class="nav-text">hbase的数据备份及恢复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hbase结合Hive使用"><span class="nav-text">Hbase结合Hive使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的集群管理"><span class="nav-text">hbase的集群管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的性能调优"><span class="nav-text">hbase的性能调优</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">彭伟轩</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站一共有：&#58;</span>
+    
+    <span title="全站一共有：">37392 字</span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ADroHFiarWbfu8gAm7EF2520-gzGzoHsz',
+        appKey: 'mswfXHnBHPsjk2PxogkBqaYW',
+        placeholder: '留言内容',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
