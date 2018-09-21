@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Wexpeng, Hi" />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -86,15 +86,20 @@
 
 
 
-<meta name="keywords" content="博客,技术,阅历,少年">
-<meta property="og:type" content="website">
-<meta property="og:title" content="神的笔记">
-<meta property="og:url" content="http://we.hewozou.me/404.html">
+<meta name="description" content="利用unix系统中的crontab功能，几乎所有的unix-like都可以使用 首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。 这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。 我们先看一下怎么把这行请求copy下来，以">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Linux定时任务自动签到">
+<meta property="og:url" content="http://we.hewozou.me/18958/index.html">
 <meta property="og:site_name" content="神的笔记">
+<meta property="og:description" content="利用unix系统中的crontab功能，几乎所有的unix-like都可以使用 首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。 这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。 我们先看一下怎么把这行请求copy下来，以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-27T13:30:04.102Z">
+<meta property="og:image" content="http://we.hewozou.me/images/music163qiandaoshow.png">
+<meta property="og:updated_time" content="2018-09-14T03:55:30.967Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="神的笔记">
+<meta name="twitter:title" content="利用Linux定时任务自动签到">
+<meta name="twitter:description" content="利用unix系统中的crontab功能，几乎所有的unix-like都可以使用 首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。 这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。 我们先看一下怎么把这行请求copy下来，以">
+<meta name="twitter:image" content="http://we.hewozou.me/images/music163qiandaoshow.png">
 
 
 
@@ -124,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://we.hewozou.me/404.html"/>
+  <link rel="canonical" href="http://we.hewozou.me/18958/"/>
 
 
 
@@ -138,7 +143,7 @@ daovoice('init', {
 daovoice('update');
 </script>
 
-  <title> | 神的笔记</title>
+  <title>利用Linux定时任务自动签到 | 神的笔记</title>
   
 
 
@@ -297,47 +302,271 @@ daovoice('update');
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://we.hewozou.me/18958/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彭伟轩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神的笔记">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline"></h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <!DOCTYPE HTML>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8;">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="robots" content="all">
-  <meta name="robots" content="index,follow">
-</head> 
-<body>
-  <script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/" homepagename="回到我的主页">
-  </script>
-  <script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
-  <script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script>
-</body>
-</html>
+          <h2 class="post-title" itemprop="name headline">利用Linux定时任务自动签到</h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-10T14:06:24+08:00">
+                2015-07-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/18958/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/18958/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                
+                  <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+
+                <span title="字数统计">
+                  853 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+          
+
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+    <div class="post-body" itemprop="articleBody"> 
+
       
       
+
+      
+        <p>利用unix系统中的crontab功能，几乎所有的unix-like都可以使用</p>
+<p>首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。</p>
+<p>这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。</p>
+<p>我们先看一下怎么把这行请求copy下来，以网易云音乐签到为例，这是图片演示：</p>
+<p><img src="../images/music163qiandaoshow.png" alt="copy签到请求的步骤演示图" title="步骤演示图"></p>
+<a id="more"></a>
+<p>得到的粘贴版信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl <span class="string">'https://music.163.com/weapi/point/dailyTask?csrf_token=b7a1c698043d482560f0cce44ff63e53'</span> -H <span class="string">'Origin: https://music.163.com'</span> -H <span class="string">'Accept-Encoding: gzip, deflate, br'</span> -H <span class="string">'Accept-Language: zh-CN,zh;q=0.9'</span> -H <span class="string">'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'</span> -H <span class="string">'Content-Type: application/x-www-form-urlencoded'</span> -H <span class="string">'Accept: */*'</span> -H <span class="string">'Referer: https://music.163.com/discover'</span> -H <span class="string">'Cookie: _iuqxldmzr_=32; _ntes_nnid=747d80cace901d222900369b376b1a67,1532528882594; _ntes_nuid=747d80cace901d222900369b376b1a67; WM_TID=7wCxJdMQq1jsaKAHG9FO6Jv%2BpXC39FjR; __utmc=94650624; __utma=94650624.834439023.1532528883.1532689910.1532693185.12; __utmz=94650624.1532693185.12.12.utmcsr=localhost:4000|utmccn=(referral)|utmcmd=referral|utmcct=/%E3%80%8A%E8%A7%A6%E4%B8%8D%E5%8F%AF%E5%8F%8A%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/; JSESSIONID-WYYY=TfMiNorhJxoNNRHZzsT6I3ytA3SiEkrSMYckUktMqvzNh%2FW%2FMyuee7%2BTI41%2BnR07yCqVUeKxGQHZE%5CKYIguup6nFgRRXnf0drcWJ9Uri%2FTcz%5Cjpws90hcecjvJCJ%2FEkpQjn7UMxP%5CzMk%2BCG7O555SY%2FEV%5CQCrKnJUhRDlZqFTOO%2F%5CaBO%3A1532695189418; WM_NI=2GddNh7DkEcTCh%2BJTG0jODM96M%2F%2FfTEoqlmBokw3nWt6Ki1zAE%2FNJ9LMBR6cBT0GpUi0LZ1B11E9r%2F%2B6%2F5T0TWIzb2F8i95wbtz8wCldeR%2FrcR%2BpHRu8Xkuzm%2BEQKshAY0U%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6ee9bca7dafbbb6b6d26b9a8d81b8c74dbc98abb3c566b2b7bbd9d2728a99a2b3c52af0fea7c3b92af299ac85cd64f59ca5a6e26081b8e5abd74df4b681a5d033f693e1d0e56087b1bf8df04aadb5b9d4ed5db8ea858ab472839be1afc93390938eb3b569828c00a8f35fabf084bbb44af3ef8bdaf125e9eae1d6d73c9889879be13a86e8a7dab87da2acb6d9f649b0bcabb3ae7aa18ee591cb5ab7e8988cf872aff58bb2ca79ac9f97d1d837e2a3; MUSIC_U=81b463b520d57cc36ade08b68cfeac96fccddbfe17f8e76c6e739cda4210db1da7a6212dc58f9f2b37673d28e13b757a8bafcdfe5ad2b092; __remember_me=true; __csrf=b7a1c698043d482560f0cce44ff63e53; __utmb=94650624.4.10.1532693185'</span> -H <span class="string">'Connection: keep-alive'</span> --data <span class="string">'params=IHpPHTtQNwhRrO2qJoTtSJYBcZ6tsV1YruVJ%2B9e0BLB4vAK9%2FUM38I3LTI2Jupe24DsIYDkSFhDEZZJiQdfoTiARxbRPNSuKMtMtvWSzKhXTrb78o9o0BlwoxOKiaD6L&amp;encSecKey=5efc26c359444bea688cff13b45a64f413cb31312d012a82401b5c707e954777090e34e852626747a04f45755e8c1638b8b17dff9ac1121b437d571dba865b344f86b2459efa90b82c24d623fb52ba313d76d59ef361766b07103e32fa7ed96e4ed80f0a0de74a66b437a7f928b60d0481391cfa739c24011559caf738ad0b7c'</span> --compressed</span><br></pre></td></tr></table></figure></p>
+<p>将来如果有高手看到了这行信息，大约可以直接登陆我的网易云账号了。是的，这里面包含登陆信息。</p>
+<p>我们要建立一个<code>.sh</code>文件，把这行信息保存进去。注意查看行号是否只有一行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># crontab -n   //输入后会出现一个vi输入框。</span></span><br></pre></td></tr></table></figure>
+<p>逻辑就是把所有的curl签到请求放在一个sh文件里面保存，再使用Linux的<strong>定时任务</strong>执行此sh文件。</p>
+<p>如果有服务器的话，设定一天执行一次就好了，但是在自己用的电脑上，我设置的半小时一次，这样保险。因为不一定无时无刻开机嘛，执行此命令只需要消耗很少的资源。</p>
+<p>我有很多网站在自动签到，包括签到领取下载币的，都有3000个币了。</p>
+<p>手机上的也同样可以，以后再写。</p>
+<blockquote>
+<p>crontab 主要是在做计划任务、定时执行, 通常一般写法大概都是如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30  23  *  *  * shutdown //每天晚上11点30关机</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>规则如下: </p>
+<p>一共五颗<code>*</code>号 从左至右分别代表:<strong>分 时 日 月 周</strong></p>
+<p>取值范围如下表: </p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>允许的值得</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分钟</td>
+<td>0-59</td>
+</tr>
+<tr>
+<td>小时</td>
+<td>0-23</td>
+</tr>
+<tr>
+<td>日期</td>
+<td>1-31</td>
+</tr>
+<tr>
+<td>月份</td>
+<td>1-12</td>
+</tr>
+<tr>
+<td>周</td>
+<td>0-7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：如果不在范围之内，程序是不会执行的</p>
+<p>还有有这种写法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@hourly /usr/<span class="built_in">local</span>/www/awstats/cgi-bin/awstats.sh</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>使用 @hourly 对应的是 0 * * * *, 下述可以使用</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#前置字符           含义</span></span><br><span class="line">------           ------- </span><br><span class="line">@reboot        	//每次开机执行 </span><br><span class="line">@yearly         //一年执行一次,等同于 <span class="string">"0 0 1 1 *"</span>. </span><br><span class="line">@annually      	//和上面是一样的</span><br><span class="line">@monthly       	//一个月执行一次, <span class="string">"0 0 1 * *"</span>. </span><br><span class="line">@weekly         //一周执行一次, <span class="string">"0 0 * * 0"</span>. </span><br><span class="line">@daily          //每天执行一次, <span class="string">"0 0 * * *"</span>. </span><br><span class="line">@midnight       //和上面是一样的 </span><br><span class="line">@hourly         //每小时执行一次, <span class="string">"0 * * * *"</span>.</span><br></pre></td></tr></table></figure>
+<p>注意到，还有@reboot使用方式，所以写在 rc.local 的东西, 也可以使用 @reboot 写在 crontab 里面。</p>
+<blockquote>
+<p>re.local ：开机执行的东西</p>
+</blockquote>
+
       
     </div>
+
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/52540/" rel="next" title="世界你好，Jan你好">
+                <i class="fa fa-chevron-left"></i> 世界你好，Jan你好
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/25795/" rel="prev" title="观《千与千寻》">
+                观《千与千寻》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
