@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="技术,Big Data," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="大数据简介在很多年前，国家公安部想部署“天眼系统”，就是在全国道路范围内，无死角无模糊的定位犯罪活动，很可惜没搞起来，其实想也知道，一秒钟全国如此多的摄像头拍摄，要多大的硬盘多块的计算速度才能做到如此巨大的工程？搁置了几年后，项目又提上来了，此时大数据技术趋于成熟，现在大家都知道了，大街小巷丢一辆摩托车三十分钟就能找到人，而任何一辆汽车闯红灯都能准确无误地记录，甚至有媒体报道过：一些大型演唱会高清">
+<meta name="keywords" content="技术,Big Data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大数据学习计划">
+<meta property="og:url" content="http://we.hewozou.me/45975/index.html">
+<meta property="og:site_name" content="神的笔记">
+<meta property="og:description" content="大数据简介在很多年前，国家公安部想部署“天眼系统”，就是在全国道路范围内，无死角无模糊的定位犯罪活动，很可惜没搞起来，其实想也知道，一秒钟全国如此多的摄像头拍摄，要多大的硬盘多块的计算速度才能做到如此巨大的工程？搁置了几年后，项目又提上来了，此时大数据技术趋于成熟，现在大家都知道了，大街小巷丢一辆摩托车三十分钟就能找到人，而任何一辆汽车闯红灯都能准确无误地记录，甚至有媒体报道过：一些大型演唱会高清">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-14T15:38:55.203Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大数据学习计划">
+<meta name="twitter:description" content="大数据简介在很多年前，国家公安部想部署“天眼系统”，就是在全国道路范围内，无死角无模糊的定位犯罪活动，很可惜没搞起来，其实想也知道，一秒钟全国如此多的摄像头拍摄，要多大的硬盘多块的计算速度才能做到如此巨大的工程？搁置了几年后，项目又提上来了，此时大数据技术趋于成熟，现在大家都知道了，大街小巷丢一辆摩托车三十分钟就能找到人，而任何一辆汽车闯红灯都能准确无误地记录，甚至有媒体报道过：一些大型演唱会高清">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":14,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '彭伟轩'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://we.hewozou.me/45975/"/>
+
+
+
+
+
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/a35e83d2.js","daovoice")
+daovoice('init', {
+  app_id: "a35e83d2",
+});
+daovoice('update');
+</script>
+
+  <title>大数据学习计划 | 神的笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">神的笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Wexpeng's Notebook</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于执笔人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-messages">
+          <a href="/messages/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://we.hewozou.me/45975/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彭伟轩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神的笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">大数据学习计划</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T09:51:48+08:00">
+                2018-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/45975/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/45975/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                
+                  <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+
+                <span title="字数统计">
+                  3,158 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+          
+
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+    <div class="post-body" itemprop="articleBody"> 
+
+      
+      
+
+      
+        <h2 id="大数据简介"><a href="#大数据简介" class="headerlink" title="大数据简介"></a>大数据简介</h2><p>在很多年前，国家公安部想部署“天眼系统”，就是在全国道路范围内，无死角无模糊的定位犯罪活动，很可惜没搞起来，其实想也知道，一秒钟全国如此多的摄像头拍摄，要多大的硬盘多块的计算速度才能做到如此巨大的工程？搁置了几年后，项目又提上来了，此时大数据技术趋于成熟，现在大家都知道了，大街小巷丢一辆摩托车三十分钟就能找到人，而任何一辆汽车闯红灯都能准确无误地记录，甚至有媒体报道过：一些大型演唱会高清电子眼找到了在逃多年的犯罪嫌疑人。</p>
+<p>淘宝一秒钟产生的订单，微信一秒钟产生的聊天记录，都是海量数据。而且是非常成熟的技术了。所以我建议大家学习人工智能。</p>
+<p>这样的话比如闯红灯这件事，“天眼”会毫不留情的记录下来，如果是救护车或者被后车追尾呢？人工智能就能做到该记录的记录不改记录的不记录。显然人工智能技术还处在人工智障阶段。这时候入局也许比大数据有更多的机遇。</p>
+<p>不表，这里只讲大数据。</p>
+<a id="more"></a>
+<h2 id="1、Linux-课程"><a href="#1、Linux-课程" class="headerlink" title="1、Linux 课程"></a>1、Linux 课程</h2><p>大数据普遍由Linux平台承载，所以先搭建和学习Linux课程。本项目中，安装三台虚拟机</p>
+<h3 id="使用虚拟化（vmware，vbox）安装linux镜像"><a href="#使用虚拟化（vmware，vbox）安装linux镜像" class="headerlink" title="使用虚拟化（vmware，vbox）安装linux镜像"></a>使用虚拟化（vmware，vbox）安装linux镜像</h3><p>市面上常用的虚拟机有<code>Vmware Workstation</code>和<code>Oracle VM VirtualBox</code>,前者具有更稳定的功能但是收费，后者是开源软件，在企业中使用虚拟化平台，学习上这两个软件够用。<br>安装可以选择最小化安装（没有图形界面），也可以安装图形界面，就和Windows的操作无二。但是不建议使用图形界面，因为效率很低，那Windows作为服务器的时候为什么不最小安装呢？也是因为效率低，Windows的服务器对图形界面做了大量优化，真要去编辑配置文件，会脑袋大。而Linux服务器从设计上，就没有图形界面，所以对其配置文件做了优化。<br>安装……</p>
+<h3 id="认识linux的桌面环境、shell环境"><a href="#认识linux的桌面环境、shell环境" class="headerlink" title="认识linux的桌面环境、shell环境"></a>认识linux的桌面环境、shell环境</h3><p>桌面环境在作为服务器的Linux操作系统上作用微乎其微，还占用大量内存，在学习初期可以消除恐惧感，但后期不建议安装。shell环境就是我们讲的命令行，使用相关命令操作系统。</p>
+<h3 id="掌握vim编辑器"><a href="#掌握vim编辑器" class="headerlink" title="掌握vim编辑器"></a>掌握vim编辑器</h3><p>vim编辑器也许是Linux操作系统的命令了，任何一个命令都是一个软件，现在最新的vim是vim8,这里是vim的详细介绍，她值得花几周的时间去学习，最开始，你只要知道如何进入编辑然后保存退出即可。是一个命令行中的文本编辑器。也是一个命令行中的IED。<br><a href="">vim的基本配置和使用</a></p>
+<h3 id="在shell环境下进行文件系统的操作-掌握more、touch、cp、mv、rm等20多个常用命令"><a href="#在shell环境下进行文件系统的操作-掌握more、touch、cp、mv、rm等20多个常用命令" class="headerlink" title="在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令"></a>在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令</h3><h3 id="学习linux的网络管理-掌握ip、hostname等设置"><a href="#学习linux的网络管理-掌握ip、hostname等设置" class="headerlink" title="学习linux的网络管理,掌握ip、hostname等设置"></a>学习linux的网络管理,掌握ip、hostname等设置</h3><h3 id="学习虚拟化（vmware，vbox）与linux的通信设置-掌握如何实现host-only、bridge、nat等网络连接方式"><a href="#学习虚拟化（vmware，vbox）与linux的通信设置-掌握如何实现host-only、bridge、nat等网络连接方式" class="headerlink" title="学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式"></a>学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式</h3><h3 id="学习linux的进程管理-掌握如何查看、删除进程"><a href="#学习linux的进程管理-掌握如何查看、删除进程" class="headerlink" title="学习linux的进程管理,掌握如何查看、删除进程"></a>学习linux的进程管理,掌握如何查看、删除进程</h3><h3 id="学习linux的软件管理-掌握java、mysql等安装"><a href="#学习linux的软件管理-掌握java、mysql等安装" class="headerlink" title="学习linux的软件管理,掌握java、mysql等安装"></a>学习linux的软件管理,掌握java、mysql等安装</h3><h3 id="学习环境变量配置-掌握如何设置环境变量"><a href="#学习环境变量配置-掌握如何设置环境变量" class="headerlink" title="学习环境变量配置,掌握如何设置环境变量"></a>学习环境变量配置,掌握如何设置环境变量</h3><h3 id="学习linux的ssh管理-掌握如何实现免密码登录"><a href="#学习linux的ssh管理-掌握如何实现免密码登录" class="headerlink" title="学习linux的ssh管理,掌握如何实现免密码登录"></a>学习linux的ssh管理,掌握如何实现免密码登录</h3><h3 id="学习linux的防火墙管理-掌握如何关闭防火墙及开放指定端口"><a href="#学习linux的防火墙管理-掌握如何关闭防火墙及开放指定端口" class="headerlink" title="学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口"></a>学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口</h3><h3 id="学习linux的调度管理-掌握crontab的使用"><a href="#学习linux的调度管理-掌握crontab的使用" class="headerlink" title="学习linux的调度管理,掌握crontab的使用"></a>学习linux的调度管理,掌握crontab的使用</h3><h2 id="2、Hadoop"><a href="#2、Hadoop" class="headerlink" title="2、Hadoop"></a>2、Hadoop</h2><h3 id="Hadoop概念、版本、历史"><a href="#Hadoop概念、版本、历史" class="headerlink" title="Hadoop概念、版本、历史"></a>Hadoop概念、版本、历史</h3><h3 id="Hadoop和核心组成介绍及hdfs、mapreduce体系结构"><a href="#Hadoop和核心组成介绍及hdfs、mapreduce体系结构" class="headerlink" title="Hadoop和核心组成介绍及hdfs、mapreduce体系结构"></a>Hadoop和核心组成介绍及hdfs、mapreduce体系结构</h3><h3 id="Hadoop的集群结构"><a href="#Hadoop的集群结构" class="headerlink" title="Hadoop的集群结构"></a>Hadoop的集群结构</h3><h3 id="Hadoop伪分布的详细安装步骤"><a href="#Hadoop伪分布的详细安装步骤" class="headerlink" title="Hadoop伪分布的详细安装步骤"></a>Hadoop伪分布的详细安装步骤</h3><h3 id="如何通过命令行和浏览器观察hadoop"><a href="#如何通过命令行和浏览器观察hadoop" class="headerlink" title="如何通过命令行和浏览器观察hadoop"></a>如何通过命令行和浏览器观察hadoop</h3><h2 id="HDFS体系结构及shell、Java操作方式"><a href="#HDFS体系结构及shell、Java操作方式" class="headerlink" title="HDFS体系结构及shell、Java操作方式"></a>HDFS体系结构及shell、Java操作方式</h2><h3 id="Hdfs体系结构详述"><a href="#Hdfs体系结构详述" class="headerlink" title="Hdfs体系结构详述"></a>Hdfs体系结构详述</h3><h3 id="NameNode、DataNode、SecondaryNameNode体系结构"><a href="#NameNode、DataNode、SecondaryNameNode体系结构" class="headerlink" title="NameNode、DataNode、SecondaryNameNode体系结构"></a>NameNode、DataNode、SecondaryNameNode体系结构</h3><h3 id="如果保证namenode的高可靠"><a href="#如果保证namenode的高可靠" class="headerlink" title="如果保证namenode的高可靠"></a>如果保证namenode的高可靠</h3><h3 id="Datanode中block的划分原理和存储方式"><a href="#Datanode中block的划分原理和存储方式" class="headerlink" title="Datanode中block的划分原理和存储方式"></a>Datanode中block的划分原理和存储方式</h3><h3 id="如何修改namenode、datanode数据存储位置"><a href="#如何修改namenode、datanode数据存储位置" class="headerlink" title="如何修改namenode、datanode数据存储位置"></a>如何修改namenode、datanode数据存储位置</h3><h3 id="如何使用命令行操纵hdfs"><a href="#如何使用命令行操纵hdfs" class="headerlink" title="如何使用命令行操纵hdfs"></a>如何使用命令行操纵hdfs</h3><h3 id="如何使用java操作hdfs"><a href="#如何使用java操作hdfs" class="headerlink" title="如何使用java操作hdfs"></a>如何使用java操作hdfs</h3><h3 id="介绍rpc机制"><a href="#介绍rpc机制" class="headerlink" title="介绍rpc机制"></a>介绍rpc机制</h3><h3 id="通过查看源码-知晓hadoop是建构在rpc之上的"><a href="#通过查看源码-知晓hadoop是建构在rpc之上的" class="headerlink" title="通过查看源码,知晓hadoop是建构在rpc之上的"></a>通过查看源码,知晓hadoop是建构在rpc之上的</h3><h3 id="通过查看hdfs源码-知晓客户端是如何与Namenode通过rpc通信的"><a href="#通过查看hdfs源码-知晓客户端是如何与Namenode通过rpc通信的" class="headerlink" title="通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的"></a>通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的</h3><h2 id="MapReduce体系结构及各种算法"><a href="#MapReduce体系结构及各种算法" class="headerlink" title="MapReduce体系结构及各种算法"></a>MapReduce体系结构及各种算法</h2><h3 id="Mapreduce原理"><a href="#Mapreduce原理" class="headerlink" title="Mapreduce原理"></a>Mapreduce原理</h3><h3 id="Mapreduce执行的八大步骤"><a href="#Mapreduce执行的八大步骤" class="headerlink" title="Mapreduce执行的八大步骤"></a>Mapreduce执行的八大步骤</h3><h3 id="详细讲述如何使用mapreduce实现单词计数功能"><a href="#详细讲述如何使用mapreduce实现单词计数功能" class="headerlink" title="详细讲述如何使用mapreduce实现单词计数功能"></a>详细讲述如何使用mapreduce实现单词计数功能</h3><h3 id="详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中-这是考察重点"><a href="#详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中-这是考察重点" class="headerlink" title="详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点"></a>详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点</h3><h3 id="详细讲述hadoop的自定义类型Writable接口"><a href="#详细讲述hadoop的自定义类型Writable接口" class="headerlink" title="详细讲述hadoop的自定义类型Writable接口"></a>详细讲述hadoop的自定义类型Writable接口</h3><h3 id="通过电信上网日志实例讲述如何自定义hadoop类型"><a href="#通过电信上网日志实例讲述如何自定义hadoop类型" class="headerlink" title="通过电信上网日志实例讲述如何自定义hadoop类型"></a>通过电信上网日志实例讲述如何自定义hadoop类型</h3><h3 id="实例讲述hadoop1的各种输入来源处理器-包括数据库输入、xml文件、多文件输入等-并且讲解如何自定"><a href="#实例讲述hadoop1的各种输入来源处理器-包括数据库输入、xml文件、多文件输入等-并且讲解如何自定" class="headerlink" title="实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定"></a>实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定</h3><h3 id="义输入来源处理器"><a href="#义输入来源处理器" class="headerlink" title="义输入来源处理器"></a>义输入来源处理器</h3><h3 id="实例讲述hadoop1的各种输出来源-包括数据库输出、文件输出等-并且讲解如何自定义输出来源处理器"><a href="#实例讲述hadoop1的各种输出来源-包括数据库输出、文件输出等-并且讲解如何自定义输出来源处理器" class="headerlink" title="实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,"></a>实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,</h3><h3 id="实现自定义输出文件名称"><a href="#实现自定义输出文件名称" class="headerlink" title="实现自定义输出文件名称"></a>实现自定义输出文件名称</h3><h3 id="通过源码讲述hadoop是如何读取hdfs文件-并且转化为键值对-供map方法调用的"><a href="#通过源码讲述hadoop是如何读取hdfs文件-并且转化为键值对-供map方法调用的" class="headerlink" title="通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的"></a>通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的</h3><h3 id="讲解新旧api的区别-如何使用旧api完成操作"><a href="#讲解新旧api的区别-如何使用旧api完成操作" class="headerlink" title="讲解新旧api的区别,如何使用旧api完成操作"></a>讲解新旧api的区别,如何使用旧api完成操作</h3><h3 id="介绍如何打包成jar-在命令行运行hadoop程序"><a href="#介绍如何打包成jar-在命令行运行hadoop程序" class="headerlink" title="介绍如何打包成jar,在命令行运行hadoop程序"></a>介绍如何打包成jar,在命令行运行hadoop程序</h3><h3 id="介绍hadoop的内置计数器-以及自定义计数器"><a href="#介绍hadoop的内置计数器-以及自定义计数器" class="headerlink" title="介绍hadoop的内置计数器,以及自定义计数器"></a>介绍hadoop的内置计数器,以及自定义计数器</h3><h3 id="介绍合并-combiner-概念、为什么使用、如何使用、使用时有什么限制条件"><a href="#介绍合并-combiner-概念、为什么使用、如何使用、使用时有什么限制条件" class="headerlink" title="介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件"></a>介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件</h3><h3 id="介绍了hadoop内置的分区-partitioner-概念、为什么使用、如何使用"><a href="#介绍了hadoop内置的分区-partitioner-概念、为什么使用、如何使用" class="headerlink" title="介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用"></a>介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用</h3><h3 id="介绍了hadoop内置的排序算法-以及如何自定义排序规则"><a href="#介绍了hadoop内置的排序算法-以及如何自定义排序规则" class="headerlink" title="介绍了hadoop内置的排序算法,以及如何自定义排序规则"></a>介绍了hadoop内置的排序算法,以及如何自定义排序规则</h3><h3 id="介绍了hadoop内置的分组算法-以及如何自定义分组规则"><a href="#介绍了hadoop内置的分组算法-以及如何自定义分组规则" class="headerlink" title="介绍了hadoop内置的分组算法,以及如何自定义分组规则"></a>介绍了hadoop内置的分组算法,以及如何自定义分组规则</h3><h3 id="介绍了mapreduce的常见应用场景-以及如何实现mapreduce算法讲解"><a href="#介绍了mapreduce的常见应用场景-以及如何实现mapreduce算法讲解" class="headerlink" title="介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解"></a>介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解</h3><h3 id="如何优化mapreduce算法-实现更高的运行效率"><a href="#如何优化mapreduce算法-实现更高的运行效率" class="headerlink" title="如何优化mapreduce算法,实现更高的运行效率"></a>如何优化mapreduce算法,实现更高的运行效率</h3><h2 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h2><h3 id="Zookeeper是什么"><a href="#Zookeeper是什么" class="headerlink" title="Zookeeper是什么"></a>Zookeeper是什么</h3><h3 id="搭建zookeeper集群环境"><a href="#搭建zookeeper集群环境" class="headerlink" title="搭建zookeeper集群环境"></a>搭建zookeeper集群环境</h3><h3 id="如何使用命令行操作zookeeper"><a href="#如何使用命令行操作zookeeper" class="headerlink" title="如何使用命令行操作zookeeper"></a>如何使用命令行操作zookeeper</h3><h3 id="如何使用java操作zookeeper"><a href="#如何使用java操作zookeeper" class="headerlink" title="如何使用java操作zookeeper"></a>如何使用java操作zookeeper</h3><h2 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h2><h3 id="hbase的概述"><a href="#hbase的概述" class="headerlink" title="hbase的概述"></a>hbase的概述</h3><h3 id="hbase的数据模型"><a href="#hbase的数据模型" class="headerlink" title="hbase的数据模型"></a>hbase的数据模型</h3><h3 id="hbase的表设计"><a href="#hbase的表设计" class="headerlink" title="hbase的表设计"></a>hbase的表设计</h3><h3 id="hbase的伪分布式和集群安装"><a href="#hbase的伪分布式和集群安装" class="headerlink" title="hbase的伪分布式和集群安装"></a>hbase的伪分布式和集群安装</h3><h3 id="hbase的shell操作"><a href="#hbase的shell操作" class="headerlink" title="hbase的shell操作"></a>hbase的shell操作</h3><h3 id="hbase的JavaAPI操作"><a href="#hbase的JavaAPI操作" class="headerlink" title="hbase的JavaAPI操作"></a>hbase的JavaAPI操作</h3><h3 id="hbase的数据迁移"><a href="#hbase的数据迁移" class="headerlink" title="hbase的数据迁移"></a>hbase的数据迁移</h3><h3 id="hbase的数据备份及恢复"><a href="#hbase的数据备份及恢复" class="headerlink" title="hbase的数据备份及恢复"></a>hbase的数据备份及恢复</h3><h3 id="Hbase结合Hive使用"><a href="#Hbase结合Hive使用" class="headerlink" title="Hbase结合Hive使用"></a>Hbase结合Hive使用</h3><h3 id="hbase的集群管理"><a href="#hbase的集群管理" class="headerlink" title="hbase的集群管理"></a>hbase的集群管理</h3><h3 id="hbase的性能调优"><a href="#hbase的性能调优" class="headerlink" title="hbase的性能调优"></a>hbase的性能调优</h3><h2 id="CM-CDH集群管理"><a href="#CM-CDH集群管理" class="headerlink" title="CM+CDH集群管理"></a>CM+CDH集群管理</h2><h3 id="CM-CDH集群的安装"><a href="#CM-CDH集群的安装" class="headerlink" title="CM + CDH集群的安装"></a>CM + CDH集群的安装</h3><h3 id="基于CM主机及各种服务组件的管理"><a href="#基于CM主机及各种服务组件的管理" class="headerlink" title="基于CM主机及各种服务组件的管理"></a>基于CM主机及各种服务组件的管理</h3><h3 id="CDH集群的配置和参数调优"><a href="#CDH集群的配置和参数调优" class="headerlink" title="CDH集群的配置和参数调优"></a>CDH集群的配置和参数调优</h3><h3 id="CDH集群HA配置及集群升级"><a href="#CDH集群HA配置及集群升级" class="headerlink" title="CDH集群HA配置及集群升级"></a>CDH集群HA配置及集群升级</h3><h3 id="CM的监控管理"><a href="#CM的监控管理" class="headerlink" title="CM的监控管理"></a>CM的监控管理</h3><h3 id="集群管理的注意事项"><a href="#集群管理的注意事项" class="headerlink" title="集群管理的注意事项"></a>集群管理的注意事项</h3><h2 id="Hive课程"><a href="#Hive课程" class="headerlink" title="Hive课程"></a>Hive课程</h2><h3 id="Hive的概述、安装与基本操作"><a href="#Hive的概述、安装与基本操作" class="headerlink" title="Hive的概述、安装与基本操作"></a>Hive的概述、安装与基本操作</h3><p>大家习惯把Hive称为hadoop领域的数据仓库。Hive使用起来非常像MySQL,但是比使用MySQL更有意思。<br>我们在这里要讲述Hive的体系结构、如何安装Hive。还会讲述Hive的基本操作,目的是为了下面的继续学习。</p>
+<h3 id="Hive支持的数据类型"><a href="#Hive支持的数据类型" class="headerlink" title="Hive支持的数据类型"></a>Hive支持的数据类型</h3><p>Hive的支持的数据类型逐渐增多。其中复合数据类型,可以把关系数据库中的一对多关系挪到Hive的一张表中,<br>这是一个很神奇的事情,颠覆了我们之前的数据库设计范式。我们会讲解如何使用这种数据类型,如何把关系数<br>据库的表迁移到Hive表。</p>
+<h3 id="Hive数据的管理"><a href="#Hive数据的管理" class="headerlink" title="Hive数据的管理"></a>Hive数据的管理</h3><p>我们总拿Hive与MySQL做类比。其中,Hive对数据的操作方法是与MySQL最大的不同。我们会学习如何导入数<br>据、导出数据,会学习如何分区导入、如何增量导入,会学习导入过程中如何优化操作等内容。这部分内容是工<br>作中使用频率最高的内容之一。</p>
+<h3 id="Hive的查询"><a href="#Hive的查询" class="headerlink" title="Hive的查询"></a>Hive的查询</h3><p>这部分内容讲解Hive查询语句的基本结构,重点讲解表连接。其中,有一些我们原来不知道的语法如left semi-<br>join、sort by、cluster by等。这部分也在工作中用的是最多的内容之一。</p>
+<h3 id="Hive的函数"><a href="#Hive的函数" class="headerlink" title="Hive的函数"></a>Hive的函数</h3><p>Hive是对查询语法的扩充,Hive运行我们非常方便的使用java来编写函数,特别方便。我们除了简单介绍常见的<br>单行函数、聚合函数、表函数之外,还会介绍如何自定义函数。这样,我们就可以扩充原有函数库,实现自己的<br>业务逻辑。这是体系我们能力的好地方!</p>
+<h3 id="Hive的文件格式"><a href="#Hive的文件格式" class="headerlink" title="Hive的文件格式"></a>Hive的文件格式</h3><p>Hive的存储除了普通文件格式,也包括序列化文件格式和列式存储格式。讲解分别如何使用他们,已经何种场景<br>下使用他们。最后讲解如何自定义数据存储格式。</p>
+<h3 id="Hive的性能调优"><a href="#Hive的性能调优" class="headerlink" title="Hive的性能调优"></a>Hive的性能调优</h3><p>终于来到性能调优部分。我们会讲解本地模式、严格模式、并行执行、join优化等内容。通过实验对比发现优化<br>手段的价值所在。这是整个课程的精华,也是我们以后工作能力的最重要的体现。</p>
+<h3 id="视图、索引、与HBase整合"><a href="#视图、索引、与HBase整合" class="headerlink" title="视图、索引、与HBase整合"></a>视图、索引、与HBase整合</h3><h2 id="Sqoop"><a href="#Sqoop" class="headerlink" title="Sqoop"></a>Sqoop</h2><p>sqoop适用于在关系数据库与hdfs之间进行双向数据转换的</p>
+<h3 id="Sqoop是什么"><a href="#Sqoop是什么" class="headerlink" title="Sqoop是什么"></a>Sqoop是什么</h3><h3 id="实战-讲解Sqoop如何把mysql中的数据导入到hdfs中"><a href="#实战-讲解Sqoop如何把mysql中的数据导入到hdfs中" class="headerlink" title="实战:讲解Sqoop如何把mysql中的数据导入到hdfs中"></a>实战:讲解Sqoop如何把mysql中的数据导入到hdfs中</h3><h3 id="实战-讲解Sqoop如何把hdfs中的数据导出到mysql中"><a href="#实战-讲解Sqoop如何把hdfs中的数据导出到mysql中" class="headerlink" title="实战:讲解Sqoop如何把hdfs中的数据导出到mysql中"></a>实战:讲解Sqoop如何把hdfs中的数据导出到mysql中</h3><h3 id="Sqoop如何做成job-方便以后快速执行"><a href="#Sqoop如何做成job-方便以后快速执行" class="headerlink" title="Sqoop如何做成job,方便以后快速执行"></a>Sqoop如何做成job,方便以后快速执行</h3><h2 id="Flume"><a href="#Flume" class="headerlink" title="Flume"></a>Flume</h2><h3 id="Flume是什么"><a href="#Flume是什么" class="headerlink" title="Flume是什么"></a>Flume是什么</h3><h3 id="详细Flume的体系结构"><a href="#详细Flume的体系结构" class="headerlink" title="详细Flume的体系结构"></a>详细Flume的体系结构</h3><h3 id="讲述如何书写flume的agent配置信息"><a href="#讲述如何书写flume的agent配置信息" class="headerlink" title="讲述如何书写flume的agent配置信息"></a>讲述如何书写flume的agent配置信息</h3><h3 id="实战-flume如何动态监控文件夹中文件变化"><a href="#实战-flume如何动态监控文件夹中文件变化" class="headerlink" title="实战:flume如何动态监控文件夹中文件变化"></a>实战:flume如何动态监控文件夹中文件变化</h3><h3 id="实战-flume如何把数据导入到hdfs中"><a href="#实战-flume如何把数据导入到hdfs中" class="headerlink" title="实战:flume如何把数据导入到hdfs中"></a>实战:flume如何把数据导入到hdfs中</h3><h3 id="实战-讲解如何通过flume动态监控日志文件变化-然后导入到hdfs中"><a href="#实战-讲解如何通过flume动态监控日志文件变化-然后导入到hdfs中" class="headerlink" title="实战:讲解如何通过flume动态监控日志文件变化,然后导入到hdfs中"></a>实战:讲解如何通过flume动态监控日志文件变化,然后导入到hdfs中</h3><h2 id="Storm"><a href="#Storm" class="headerlink" title="Storm"></a>Storm</h2><h3 id="Storm是什么-包括基本概念和应用领域"><a href="#Storm是什么-包括基本概念和应用领域" class="headerlink" title="Storm是什么,包括基本概念和应用领域"></a>Storm是什么,包括基本概念和应用领域</h3><h3 id="Storm的体系结构、工作原理"><a href="#Storm的体系结构、工作原理" class="headerlink" title="Storm的体系结构、工作原理"></a>Storm的体系结构、工作原理</h3><h3 id="Storm的单机环境配置、集群环境配置"><a href="#Storm的单机环境配置、集群环境配置" class="headerlink" title="Storm的单机环境配置、集群环境配置"></a>Storm的单机环境配置、集群环境配置</h3><h3 id="Storm核心组件-包括Spout、Bolt、Stream-Groupings等等"><a href="#Storm核心组件-包括Spout、Bolt、Stream-Groupings等等" class="headerlink" title="Storm核心组件,包括Spout、Bolt、Stream Groupings等等"></a>Storm核心组件,包括Spout、Bolt、Stream Groupings等等</h3><h3 id="Storm如何实现消息处理的安全性-保证消息处理无遗漏"><a href="#Storm如何实现消息处理的安全性-保证消息处理无遗漏" class="headerlink" title="Storm如何实现消息处理的安全性,保证消息处理无遗漏"></a>Storm如何实现消息处理的安全性,保证消息处理无遗漏</h3><h3 id="Storm的批处理事务处理"><a href="#Storm的批处理事务处理" class="headerlink" title="Storm的批处理事务处理"></a>Storm的批处理事务处理</h3><h3 id="实战-使用Storm完成单词计数等操作"><a href="#实战-使用Storm完成单词计数等操作" class="headerlink" title="实战:使用Storm完成单词计数等操作"></a>实战:使用Storm完成单词计数等操作</h3><h3 id="实战-计算网站的pv、uv等操作"><a href="#实战-计算网站的pv、uv等操作" class="headerlink" title="实战:计算网站的pv、uv等操作"></a>实战:计算网站的pv、uv等操作</h3><h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><h3 id="kafka是什么"><a href="#kafka是什么" class="headerlink" title="kafka是什么"></a>kafka是什么</h3><h3 id="kafka体系结构"><a href="#kafka体系结构" class="headerlink" title="kafka体系结构"></a>kafka体系结构</h3><h3 id="kafka的安装"><a href="#kafka的安装" class="headerlink" title="kafka的安装"></a>kafka的安装</h3><h3 id="kafka的存储策略"><a href="#kafka的存储策略" class="headerlink" title="kafka的存储策略"></a>kafka的存储策略</h3><h3 id="kafka的发布与订阅"><a href="#kafka的发布与订阅" class="headerlink" title="kafka的发布与订阅"></a>kafka的发布与订阅</h3><h3 id="使用Zookeeper协调管理"><a href="#使用Zookeeper协调管理" class="headerlink" title="使用Zookeeper协调管理"></a>使用Zookeeper协调管理</h3><h3 id="实战-Kafka和Storm的综合应用"><a href="#实战-Kafka和Storm的综合应用" class="headerlink" title="实战:Kafka和Storm的综合应用"></a>实战:Kafka和Storm的综合应用</h3><h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><h3 id="redis特点、与其他数据库的比较"><a href="#redis特点、与其他数据库的比较" class="headerlink" title="redis特点、与其他数据库的比较"></a>redis特点、与其他数据库的比较</h3><h3 id="如何安装redis"><a href="#如何安装redis" class="headerlink" title="如何安装redis"></a>如何安装redis</h3><h3 id="如何使用命令行客户端"><a href="#如何使用命令行客户端" class="headerlink" title="如何使用命令行客户端"></a>如何使用命令行客户端</h3><h3 id="redis的字符串类型"><a href="#redis的字符串类型" class="headerlink" title="redis的字符串类型"></a>redis的字符串类型</h3><h3 id="redis的散列类型"><a href="#redis的散列类型" class="headerlink" title="redis的散列类型"></a>redis的散列类型</h3><h3 id="redis的列表类型"><a href="#redis的列表类型" class="headerlink" title="redis的列表类型"></a>redis的列表类型</h3><h3 id="redis的集合类型"><a href="#redis的集合类型" class="headerlink" title="redis的集合类型"></a>redis的集合类型</h3><h3 id="如何使用java访问redis"><a href="#如何使用java访问redis" class="headerlink" title="如何使用java访问redis"></a>如何使用java访问redis</h3><h3 id="redis的事务-transaction"><a href="#redis的事务-transaction" class="headerlink" title="redis的事务(transaction)"></a>redis的事务(transaction)</h3><h3 id="redis的管道-pipeline"><a href="#redis的管道-pipeline" class="headerlink" title="redis的管道(pipeline)"></a>redis的管道(pipeline)</h3><h3 id="redis持久化-AOF-RDB"><a href="#redis持久化-AOF-RDB" class="headerlink" title="redis持久化(AOF+RDB)"></a>redis持久化(AOF+RDB)</h3><h3 id="redis优化"><a href="#redis优化" class="headerlink" title="redis优化"></a>redis优化</h3><h3 id="redis的主从复制"><a href="#redis的主从复制" class="headerlink" title="redis的主从复制"></a>redis的主从复制</h3><h3 id="redis的sentinel高可用"><a href="#redis的sentinel高可用" class="headerlink" title="redis的sentinel高可用"></a>redis的sentinel高可用</h3><h3 id="redis3-x集群安装配置"><a href="#redis3-x集群安装配置" class="headerlink" title="redis3.x集群安装配置"></a>redis3.x集群安装配置</h3><h2 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h2><h3 id="scala解释器、变量、常用数据类型等"><a href="#scala解释器、变量、常用数据类型等" class="headerlink" title="scala解释器、变量、常用数据类型等"></a>scala解释器、变量、常用数据类型等</h3><h3 id="scala的条件表达式、输入输出、循环等控制结构"><a href="#scala的条件表达式、输入输出、循环等控制结构" class="headerlink" title="scala的条件表达式、输入输出、循环等控制结构"></a>scala的条件表达式、输入输出、循环等控制结构</h3><h3 id="scala的函数、默认参数、变长参数等"><a href="#scala的函数、默认参数、变长参数等" class="headerlink" title="scala的函数、默认参数、变长参数等"></a>scala的函数、默认参数、变长参数等</h3><h3 id="scala的数组、变长数组、多维数组等"><a href="#scala的数组、变长数组、多维数组等" class="headerlink" title="scala的数组、变长数组、多维数组等"></a>scala的数组、变长数组、多维数组等</h3><h3 id="scala的映射、元祖等操作"><a href="#scala的映射、元祖等操作" class="headerlink" title="scala的映射、元祖等操作"></a>scala的映射、元祖等操作</h3><h3 id="scala的类-包括bean属性、辅助构造器、主构造器等"><a href="#scala的类-包括bean属性、辅助构造器、主构造器等" class="headerlink" title="scala的类,包括bean属性、辅助构造器、主构造器等"></a>scala的类,包括bean属性、辅助构造器、主构造器等</h3><h3 id="scala的对象、单例对象、伴生对象、扩展类、apply方法等"><a href="#scala的对象、单例对象、伴生对象、扩展类、apply方法等" class="headerlink" title="scala的对象、单例对象、伴生对象、扩展类、apply方法等"></a>scala的对象、单例对象、伴生对象、扩展类、apply方法等</h3><h3 id="scala的包、引入、继承等概念"><a href="#scala的包、引入、继承等概念" class="headerlink" title="scala的包、引入、继承等概念"></a>scala的包、引入、继承等概念</h3><h3 id="scala的特质"><a href="#scala的特质" class="headerlink" title="scala的特质"></a>scala的特质</h3><h3 id="scala的操作符"><a href="#scala的操作符" class="headerlink" title="scala的操作符"></a>scala的操作符</h3><h3 id="scala的高阶函数-这是重点-spark的原代码几乎全是高阶函数"><a href="#scala的高阶函数-这是重点-spark的原代码几乎全是高阶函数" class="headerlink" title="scala的高阶函数(这是重点,spark的原代码几乎全是高阶函数)"></a>scala的高阶函数(这是重点,spark的原代码几乎全是高阶函数)</h3><h3 id="scala的集合"><a href="#scala的集合" class="headerlink" title="scala的集合"></a>scala的集合</h3><h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><h3 id="Spark入门"><a href="#Spark入门" class="headerlink" title="Spark入门"></a>Spark入门</h3><h3 id="Spark与Hadoop的比较"><a href="#Spark与Hadoop的比较" class="headerlink" title="Spark与Hadoop的比较"></a>Spark与Hadoop的比较</h3><h3 id="Spark环境搭建"><a href="#Spark环境搭建" class="headerlink" title="Spark环境搭建"></a>Spark环境搭建</h3><h3 id="实战-使用Spark完成单词计数"><a href="#实战-使用Spark完成单词计数" class="headerlink" title="实战:使用Spark完成单词计数"></a>实战:使用Spark完成单词计数</h3><h3 id="Spark缓存策略"><a href="#Spark缓存策略" class="headerlink" title="Spark缓存策略"></a>Spark缓存策略</h3><h3 id="Spark的transformation和action"><a href="#Spark的transformation和action" class="headerlink" title="Spark的transformation和action"></a>Spark的transformation和action</h3><h3 id="Spark的容错机制"><a href="#Spark的容错机制" class="headerlink" title="Spark的容错机制"></a>Spark的容错机制</h3><h3 id="Spark的核心组件"><a href="#Spark的核心组件" class="headerlink" title="Spark的核心组件"></a>Spark的核心组件</h3><h3 id="Spark的各种RDD"><a href="#Spark的各种RDD" class="headerlink" title="Spark的各种RDD"></a>Spark的各种RDD</h3><h3 id="Spark的流计算"><a href="#Spark的流计算" class="headerlink" title="Spark的流计算"></a>Spark的流计算</h3><h2 id="Oozie"><a href="#Oozie" class="headerlink" title="Oozie"></a>Oozie</h2><h3 id="Oozie入门介绍"><a href="#Oozie入门介绍" class="headerlink" title="Oozie入门介绍"></a>Oozie入门介绍</h3><h3 id="Oozie安装配置及其简单操作"><a href="#Oozie安装配置及其简单操作" class="headerlink" title="Oozie安装配置及其简单操作"></a>Oozie安装配置及其简单操作</h3><h3 id="hPDL语言学习及流程定义"><a href="#hPDL语言学习及流程定义" class="headerlink" title="hPDL语言学习及流程定义"></a>hPDL语言学习及流程定义</h3><h3 id="oozie工作流配置及元数据库定义"><a href="#oozie工作流配置及元数据库定义" class="headerlink" title="oozie工作流配置及元数据库定义"></a>oozie工作流配置及元数据库定义</h3><h3 id="oozie定时任务调度和oozie-API操作"><a href="#oozie定时任务调度和oozie-API操作" class="headerlink" title="oozie定时任务调度和oozie API操作"></a>oozie定时任务调度和oozie API操作</h3><h2 id="Impala"><a href="#Impala" class="headerlink" title="Impala"></a>Impala</h2><h3 id="Impala及其架构介绍"><a href="#Impala及其架构介绍" class="headerlink" title="Impala及其架构介绍"></a>Impala及其架构介绍</h3><h3 id="Impala使用方法"><a href="#Impala使用方法" class="headerlink" title="Impala使用方法"></a>Impala使用方法</h3><h3 id="Impala配置及其调优"><a href="#Impala配置及其调优" class="headerlink" title="Impala配置及其调优"></a>Impala配置及其调优</h3><h3 id="Impala项目应用"><a href="#Impala项目应用" class="headerlink" title="Impala项目应用"></a>Impala项目应用</h3><h3 id="Impala和spark-SQL对比"><a href="#Impala和spark-SQL对比" class="headerlink" title="Impala和spark SQL对比"></a>Impala和spark SQL对比</h3><h2 id="Kettle"><a href="#Kettle" class="headerlink" title="Kettle"></a>Kettle</h2><h3 id="kettle简介"><a href="#kettle简介" class="headerlink" title="kettle简介"></a>kettle简介</h3><h3 id="windows开发环境的搭建和使用"><a href="#windows开发环境的搭建和使用" class="headerlink" title="windows开发环境的搭建和使用"></a>windows开发环境的搭建和使用</h3><h3 id="linux下服务器的搭建和使用"><a href="#linux下服务器的搭建和使用" class="headerlink" title="linux下服务器的搭建和使用"></a>linux下服务器的搭建和使用</h3><h3 id="资源库、变量、共享库的配置"><a href="#资源库、变量、共享库的配置" class="headerlink" title="资源库、变量、共享库的配置"></a>资源库、变量、共享库的配置</h3><h3 id="kettle常用组件"><a href="#kettle常用组件" class="headerlink" title="kettle常用组件"></a>kettle常用组件</h3><h3 id="kettle的应用案例"><a href="#kettle的应用案例" class="headerlink" title="kettle的应用案例"></a>kettle的应用案例</h3><h2 id="Ganglia"><a href="#Ganglia" class="headerlink" title="Ganglia"></a>Ganglia</h2><h3 id="ganglia的基本原"><a href="#ganglia的基本原" class="headerlink" title="ganglia的基本原"></a>ganglia的基本原</h3><h3 id="搭建和使用ganglia监控服务器的指标"><a href="#搭建和使用ganglia监控服务器的指标" class="headerlink" title="搭建和使用ganglia监控服务器的指标"></a>搭建和使用ganglia监控服务器的指标</h3><h3 id="配置和使用ganglia监控大数据hadoop和habase集群、flume监控"><a href="#配置和使用ganglia监控大数据hadoop和habase集群、flume监控" class="headerlink" title="配置和使用ganglia监控大数据hadoop和habase集群、flume监控"></a>配置和使用ganglia监控大数据hadoop和habase集群、flume监控</h3><h3 id="编写和使用自定义指标"><a href="#编写和使用自定义指标" class="headerlink" title="编写和使用自定义指标"></a>编写和使用自定义指标</h3><h2 id="Tachyon"><a href="#Tachyon" class="headerlink" title="Tachyon"></a>Tachyon</h2><h3 id="Tachyon简介"><a href="#Tachyon简介" class="headerlink" title="Tachyon简介"></a>Tachyon简介</h3><h3 id="Tachyon架构详解"><a href="#Tachyon架构详解" class="headerlink" title="Tachyon架构详解"></a>Tachyon架构详解</h3><h3 id="Tachyon安装"><a href="#Tachyon安装" class="headerlink" title="Tachyon安装"></a>Tachyon安装</h3><h3 id="Tachyon参数配置"><a href="#Tachyon参数配置" class="headerlink" title="Tachyon参数配置"></a>Tachyon参数配置</h3><h3 id="Tachyon结合Hadoop使用"><a href="#Tachyon结合Hadoop使用" class="headerlink" title="Tachyon结合Hadoop使用"></a>Tachyon结合Hadoop使用</h3><h3 id="Tachyon结合Spark使用"><a href="#Tachyon结合Spark使用" class="headerlink" title="Tachyon结合Spark使用"></a>Tachyon结合Spark使用</h3>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/Big-Data/" rel="tag"># Big Data</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/9569/" rel="next" title="Linux光盘挂载">
+                <i class="fa fa-chevron-left"></i> Linux光盘挂载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/18b58cad/" rel="prev" title="观《前任3》">
+                观《前任3》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="彭伟轩" />
+            
+              <p class="site-author-name" itemprop="name">彭伟轩</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="tel:18229738322" target="_blank" title="电话">
+                      
+                        <i class="fa fa-fw fa-phone"></i>电话</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/wexoeng/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://user.qzone.qq.com/1962311496/infocenter" target="_blank" title="QQ空间">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ空间</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/user/home?id=79199600" target="_blank" title="网易音乐">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="../64785" title="博客创建初心" target="_blank">博客创建初心</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#大数据简介"><span class="nav-text">大数据简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Linux-课程"><span class="nav-text">1、Linux 课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用虚拟化（vmware，vbox）安装linux镜像"><span class="nav-text">使用虚拟化（vmware，vbox）安装linux镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认识linux的桌面环境、shell环境"><span class="nav-text">认识linux的桌面环境、shell环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#掌握vim编辑器"><span class="nav-text">掌握vim编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在shell环境下进行文件系统的操作-掌握more、touch、cp、mv、rm等20多个常用命令"><span class="nav-text">在shell环境下进行文件系统的操作,掌握more、touch、cp、mv、rm等20多个常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的网络管理-掌握ip、hostname等设置"><span class="nav-text">学习linux的网络管理,掌握ip、hostname等设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习虚拟化（vmware，vbox）与linux的通信设置-掌握如何实现host-only、bridge、nat等网络连接方式"><span class="nav-text">学习虚拟化（vmware，vbox）与linux的通信设置,掌握如何实现host-only、bridge、nat等网络连接方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的进程管理-掌握如何查看、删除进程"><span class="nav-text">学习linux的进程管理,掌握如何查看、删除进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的软件管理-掌握java、mysql等安装"><span class="nav-text">学习linux的软件管理,掌握java、mysql等安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习环境变量配置-掌握如何设置环境变量"><span class="nav-text">学习环境变量配置,掌握如何设置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的ssh管理-掌握如何实现免密码登录"><span class="nav-text">学习linux的ssh管理,掌握如何实现免密码登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的防火墙管理-掌握如何关闭防火墙及开放指定端口"><span class="nav-text">学习linux的防火墙管理,掌握如何关闭防火墙及开放指定端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习linux的调度管理-掌握crontab的使用"><span class="nav-text">学习linux的调度管理,掌握crontab的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Hadoop"><span class="nav-text">2、Hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop概念、版本、历史"><span class="nav-text">Hadoop概念、版本、历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop和核心组成介绍及hdfs、mapreduce体系结构"><span class="nav-text">Hadoop和核心组成介绍及hdfs、mapreduce体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop的集群结构"><span class="nav-text">Hadoop的集群结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop伪分布的详细安装步骤"><span class="nav-text">Hadoop伪分布的详细安装步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何通过命令行和浏览器观察hadoop"><span class="nav-text">如何通过命令行和浏览器观察hadoop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDFS体系结构及shell、Java操作方式"><span class="nav-text">HDFS体系结构及shell、Java操作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hdfs体系结构详述"><span class="nav-text">Hdfs体系结构详述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NameNode、DataNode、SecondaryNameNode体系结构"><span class="nav-text">NameNode、DataNode、SecondaryNameNode体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果保证namenode的高可靠"><span class="nav-text">如果保证namenode的高可靠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Datanode中block的划分原理和存储方式"><span class="nav-text">Datanode中block的划分原理和存储方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何修改namenode、datanode数据存储位置"><span class="nav-text">如何修改namenode、datanode数据存储位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用命令行操纵hdfs"><span class="nav-text">如何使用命令行操纵hdfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用java操作hdfs"><span class="nav-text">如何使用java操作hdfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍rpc机制"><span class="nav-text">介绍rpc机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过查看源码-知晓hadoop是建构在rpc之上的"><span class="nav-text">通过查看源码,知晓hadoop是建构在rpc之上的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过查看hdfs源码-知晓客户端是如何与Namenode通过rpc通信的"><span class="nav-text">通过查看hdfs源码,知晓客户端是如何与Namenode通过rpc通信的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce体系结构及各种算法"><span class="nav-text">MapReduce体系结构及各种算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mapreduce原理"><span class="nav-text">Mapreduce原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mapreduce执行的八大步骤"><span class="nav-text">Mapreduce执行的八大步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲述如何使用mapreduce实现单词计数功能"><span class="nav-text">详细讲述如何使用mapreduce实现单词计数功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中-这是考察重点"><span class="nav-text">详细讲述如何覆盖Mapper功能、如何覆盖Reducer功能。在各种hadoop认证中,这是考察重点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细讲述hadoop的自定义类型Writable接口"><span class="nav-text">详细讲述hadoop的自定义类型Writable接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过电信上网日志实例讲述如何自定义hadoop类型"><span class="nav-text">通过电信上网日志实例讲述如何自定义hadoop类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例讲述hadoop1的各种输入来源处理器-包括数据库输入、xml文件、多文件输入等-并且讲解如何自定"><span class="nav-text">实例讲述hadoop1的各种输入来源处理器,包括数据库输入、xml文件、多文件输入等,并且讲解如何自定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#义输入来源处理器"><span class="nav-text">义输入来源处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例讲述hadoop1的各种输出来源-包括数据库输出、文件输出等-并且讲解如何自定义输出来源处理器"><span class="nav-text">实例讲述hadoop1的各种输出来源,包括数据库输出、文件输出等,并且讲解如何自定义输出来源处理器,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现自定义输出文件名称"><span class="nav-text">实现自定义输出文件名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过源码讲述hadoop是如何读取hdfs文件-并且转化为键值对-供map方法调用的"><span class="nav-text">通过源码讲述hadoop是如何读取hdfs文件,并且转化为键值对,供map方法调用的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲解新旧api的区别-如何使用旧api完成操作"><span class="nav-text">讲解新旧api的区别,如何使用旧api完成操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍如何打包成jar-在命令行运行hadoop程序"><span class="nav-text">介绍如何打包成jar,在命令行运行hadoop程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍hadoop的内置计数器-以及自定义计数器"><span class="nav-text">介绍hadoop的内置计数器,以及自定义计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍合并-combiner-概念、为什么使用、如何使用、使用时有什么限制条件"><span class="nav-text">介绍合并(combiner)概念、为什么使用、如何使用、使用时有什么限制条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了hadoop内置的分区-partitioner-概念、为什么使用、如何使用"><span class="nav-text">介绍了hadoop内置的分区(partitioner)概念、为什么使用、如何使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了hadoop内置的排序算法-以及如何自定义排序规则"><span class="nav-text">介绍了hadoop内置的排序算法,以及如何自定义排序规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了hadoop内置的分组算法-以及如何自定义分组规则"><span class="nav-text">介绍了hadoop内置的分组算法,以及如何自定义分组规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍了mapreduce的常见应用场景-以及如何实现mapreduce算法讲解"><span class="nav-text">介绍了mapreduce的常见应用场景,以及如何实现mapreduce算法讲解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何优化mapreduce算法-实现更高的运行效率"><span class="nav-text">如何优化mapreduce算法,实现更高的运行效率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zookeeper"><span class="nav-text">zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Zookeeper是什么"><span class="nav-text">Zookeeper是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建zookeeper集群环境"><span class="nav-text">搭建zookeeper集群环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用命令行操作zookeeper"><span class="nav-text">如何使用命令行操作zookeeper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用java操作zookeeper"><span class="nav-text">如何使用java操作zookeeper</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HBase"><span class="nav-text">HBase</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的概述"><span class="nav-text">hbase的概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的数据模型"><span class="nav-text">hbase的数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的表设计"><span class="nav-text">hbase的表设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的伪分布式和集群安装"><span class="nav-text">hbase的伪分布式和集群安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的shell操作"><span class="nav-text">hbase的shell操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的JavaAPI操作"><span class="nav-text">hbase的JavaAPI操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的数据迁移"><span class="nav-text">hbase的数据迁移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的数据备份及恢复"><span class="nav-text">hbase的数据备份及恢复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hbase结合Hive使用"><span class="nav-text">Hbase结合Hive使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的集群管理"><span class="nav-text">hbase的集群管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的性能调优"><span class="nav-text">hbase的性能调优</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CM-CDH集群管理"><span class="nav-text">CM+CDH集群管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CM-CDH集群的安装"><span class="nav-text">CM + CDH集群的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于CM主机及各种服务组件的管理"><span class="nav-text">基于CM主机及各种服务组件的管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDH集群的配置和参数调优"><span class="nav-text">CDH集群的配置和参数调优</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDH集群HA配置及集群升级"><span class="nav-text">CDH集群HA配置及集群升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CM的监控管理"><span class="nav-text">CM的监控管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群管理的注意事项"><span class="nav-text">集群管理的注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hive课程"><span class="nav-text">Hive课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive的概述、安装与基本操作"><span class="nav-text">Hive的概述、安装与基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive支持的数据类型"><span class="nav-text">Hive支持的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive数据的管理"><span class="nav-text">Hive数据的管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive的查询"><span class="nav-text">Hive的查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive的函数"><span class="nav-text">Hive的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive的文件格式"><span class="nav-text">Hive的文件格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive的性能调优"><span class="nav-text">Hive的性能调优</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图、索引、与HBase整合"><span class="nav-text">视图、索引、与HBase整合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sqoop"><span class="nav-text">Sqoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sqoop是什么"><span class="nav-text">Sqoop是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-讲解Sqoop如何把mysql中的数据导入到hdfs中"><span class="nav-text">实战:讲解Sqoop如何把mysql中的数据导入到hdfs中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-讲解Sqoop如何把hdfs中的数据导出到mysql中"><span class="nav-text">实战:讲解Sqoop如何把hdfs中的数据导出到mysql中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sqoop如何做成job-方便以后快速执行"><span class="nav-text">Sqoop如何做成job,方便以后快速执行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flume"><span class="nav-text">Flume</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flume是什么"><span class="nav-text">Flume是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细Flume的体系结构"><span class="nav-text">详细Flume的体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲述如何书写flume的agent配置信息"><span class="nav-text">讲述如何书写flume的agent配置信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-flume如何动态监控文件夹中文件变化"><span class="nav-text">实战:flume如何动态监控文件夹中文件变化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-flume如何把数据导入到hdfs中"><span class="nav-text">实战:flume如何把数据导入到hdfs中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-讲解如何通过flume动态监控日志文件变化-然后导入到hdfs中"><span class="nav-text">实战:讲解如何通过flume动态监控日志文件变化,然后导入到hdfs中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Storm"><span class="nav-text">Storm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Storm是什么-包括基本概念和应用领域"><span class="nav-text">Storm是什么,包括基本概念和应用领域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storm的体系结构、工作原理"><span class="nav-text">Storm的体系结构、工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storm的单机环境配置、集群环境配置"><span class="nav-text">Storm的单机环境配置、集群环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storm核心组件-包括Spout、Bolt、Stream-Groupings等等"><span class="nav-text">Storm核心组件,包括Spout、Bolt、Stream Groupings等等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storm如何实现消息处理的安全性-保证消息处理无遗漏"><span class="nav-text">Storm如何实现消息处理的安全性,保证消息处理无遗漏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storm的批处理事务处理"><span class="nav-text">Storm的批处理事务处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-使用Storm完成单词计数等操作"><span class="nav-text">实战:使用Storm完成单词计数等操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-计算网站的pv、uv等操作"><span class="nav-text">实战:计算网站的pv、uv等操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka"><span class="nav-text">Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka是什么"><span class="nav-text">kafka是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka体系结构"><span class="nav-text">kafka体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka的安装"><span class="nav-text">kafka的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka的存储策略"><span class="nav-text">kafka的存储策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka的发布与订阅"><span class="nav-text">kafka的发布与订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Zookeeper协调管理"><span class="nav-text">使用Zookeeper协调管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-Kafka和Storm的综合应用"><span class="nav-text">实战:Kafka和Storm的综合应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis"><span class="nav-text">Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#redis特点、与其他数据库的比较"><span class="nav-text">redis特点、与其他数据库的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何安装redis"><span class="nav-text">如何安装redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用命令行客户端"><span class="nav-text">如何使用命令行客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的字符串类型"><span class="nav-text">redis的字符串类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的散列类型"><span class="nav-text">redis的散列类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的列表类型"><span class="nav-text">redis的列表类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的集合类型"><span class="nav-text">redis的集合类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用java访问redis"><span class="nav-text">如何使用java访问redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的事务-transaction"><span class="nav-text">redis的事务(transaction)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的管道-pipeline"><span class="nav-text">redis的管道(pipeline)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis持久化-AOF-RDB"><span class="nav-text">redis持久化(AOF+RDB)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis优化"><span class="nav-text">redis优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的主从复制"><span class="nav-text">redis的主从复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis的sentinel高可用"><span class="nav-text">redis的sentinel高可用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis3-x集群安装配置"><span class="nav-text">redis3.x集群安装配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scala"><span class="nav-text">Scala</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scala解释器、变量、常用数据类型等"><span class="nav-text">scala解释器、变量、常用数据类型等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的条件表达式、输入输出、循环等控制结构"><span class="nav-text">scala的条件表达式、输入输出、循环等控制结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的函数、默认参数、变长参数等"><span class="nav-text">scala的函数、默认参数、变长参数等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的数组、变长数组、多维数组等"><span class="nav-text">scala的数组、变长数组、多维数组等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的映射、元祖等操作"><span class="nav-text">scala的映射、元祖等操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的类-包括bean属性、辅助构造器、主构造器等"><span class="nav-text">scala的类,包括bean属性、辅助构造器、主构造器等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的对象、单例对象、伴生对象、扩展类、apply方法等"><span class="nav-text">scala的对象、单例对象、伴生对象、扩展类、apply方法等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的包、引入、继承等概念"><span class="nav-text">scala的包、引入、继承等概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的特质"><span class="nav-text">scala的特质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的操作符"><span class="nav-text">scala的操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的高阶函数-这是重点-spark的原代码几乎全是高阶函数"><span class="nav-text">scala的高阶函数(这是重点,spark的原代码几乎全是高阶函数)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scala的集合"><span class="nav-text">scala的集合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spark"><span class="nav-text">Spark</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark入门"><span class="nav-text">Spark入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark与Hadoop的比较"><span class="nav-text">Spark与Hadoop的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark环境搭建"><span class="nav-text">Spark环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实战-使用Spark完成单词计数"><span class="nav-text">实战:使用Spark完成单词计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark缓存策略"><span class="nav-text">Spark缓存策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark的transformation和action"><span class="nav-text">Spark的transformation和action</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark的容错机制"><span class="nav-text">Spark的容错机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark的核心组件"><span class="nav-text">Spark的核心组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark的各种RDD"><span class="nav-text">Spark的各种RDD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark的流计算"><span class="nav-text">Spark的流计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oozie"><span class="nav-text">Oozie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Oozie入门介绍"><span class="nav-text">Oozie入门介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oozie安装配置及其简单操作"><span class="nav-text">Oozie安装配置及其简单操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hPDL语言学习及流程定义"><span class="nav-text">hPDL语言学习及流程定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oozie工作流配置及元数据库定义"><span class="nav-text">oozie工作流配置及元数据库定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oozie定时任务调度和oozie-API操作"><span class="nav-text">oozie定时任务调度和oozie API操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Impala"><span class="nav-text">Impala</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Impala及其架构介绍"><span class="nav-text">Impala及其架构介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Impala使用方法"><span class="nav-text">Impala使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Impala配置及其调优"><span class="nav-text">Impala配置及其调优</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Impala项目应用"><span class="nav-text">Impala项目应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Impala和spark-SQL对比"><span class="nav-text">Impala和spark SQL对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kettle"><span class="nav-text">Kettle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#kettle简介"><span class="nav-text">kettle简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#windows开发环境的搭建和使用"><span class="nav-text">windows开发环境的搭建和使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux下服务器的搭建和使用"><span class="nav-text">linux下服务器的搭建和使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源库、变量、共享库的配置"><span class="nav-text">资源库、变量、共享库的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kettle常用组件"><span class="nav-text">kettle常用组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kettle的应用案例"><span class="nav-text">kettle的应用案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ganglia"><span class="nav-text">Ganglia</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ganglia的基本原"><span class="nav-text">ganglia的基本原</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建和使用ganglia监控服务器的指标"><span class="nav-text">搭建和使用ganglia监控服务器的指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置和使用ganglia监控大数据hadoop和habase集群、flume监控"><span class="nav-text">配置和使用ganglia监控大数据hadoop和habase集群、flume监控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写和使用自定义指标"><span class="nav-text">编写和使用自定义指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tachyon"><span class="nav-text">Tachyon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tachyon简介"><span class="nav-text">Tachyon简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tachyon架构详解"><span class="nav-text">Tachyon架构详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tachyon安装"><span class="nav-text">Tachyon安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tachyon参数配置"><span class="nav-text">Tachyon参数配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tachyon结合Hadoop使用"><span class="nav-text">Tachyon结合Hadoop使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tachyon结合Spark使用"><span class="nav-text">Tachyon结合Spark使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">彭伟轩</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站一共有：&#58;</span>
+    
+    <span title="全站一共有：">42301 字</span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ADroHFiarWbfu8gAm7EF2520-gzGzoHsz',
+        appKey: 'mswfXHnBHPsjk2PxogkBqaYW',
+        placeholder: '留言内容',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
