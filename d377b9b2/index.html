@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="数据结构,技术," />
+  <meta name="keywords" content="技术,数据结构," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="前言线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂。笨鸟天天飞？坚持每天更新。">
-<meta name="keywords" content="数据结构,技术">
+<meta name="description" content="前言线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂，打好线代基础。">
+<meta name="keywords" content="技术,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数学习之路">
 <meta property="og:url" content="http://we.hewozou.me/d377b9b2/index.html">
 <meta property="og:site_name" content="神的笔记">
-<meta property="og:description" content="前言线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂。笨鸟天天飞？坚持每天更新。">
+<meta property="og:description" content="前言线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂，打好线代基础。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-20T10:56:06.125Z">
+<meta property="og:updated_time" content="2019-01-21T12:57:04.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数学习之路">
-<meta name="twitter:description" content="前言线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂。笨鸟天天飞？坚持每天更新。">
+<meta name="twitter:description" content="前言线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂，打好线代基础。">
 
 
 
@@ -404,7 +404,7 @@
                 
 
                 <span title="字数统计">
-                  842 字
+                  1,225 字
                 </span>
               
 
@@ -433,20 +433,41 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，<br>我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂。笨鸟天天飞？坚持每天更新。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>线性代数非常抽象，我简直不知道如何加以应用。但是，他奠定了计算机图形学、计算机辅助设计、密码学、网络技术、经济学……说出来我都不信，不过我知道这是真的，<br>我本想按部就班的一章一章过，无奈智商压制，真心不会。所以我开始用一篇博文记录我的学习历程，把每一节都详细弄懂，打好线代基础。</p>
 <a id="more"></a>
 <h2 id="向量与矩阵"><a href="#向量与矩阵" class="headerlink" title="向量与矩阵"></a>向量与矩阵</h2><h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><h4 id="向量的基本概念"><a href="#向量的基本概念" class="headerlink" title="向量的基本概念"></a>向量的基本概念</h4><p>物理量有矢量和标量，数学上分别称为向量和数量。向量可以用数组表示，一个向量就是一个数组。数组中包含“数”的数目，称为向量的维数，标量可看成一维向量。水平书写的向量称为行向量，垂直书写的向量称为列向量。<br>如$\begin{bmatrix} 3&amp;4\end{bmatrix}$为二维行向量，$\begin{bmatrix} 2&amp;8&amp;5&amp;3 \end{bmatrix}$为四维行向量。是三维列向量$\begin{bmatrix} -1 \\ 2 \\ 0 \end{bmatrix}$。</p>
-<h4 id="向量的几何定义"><a href="#向量的几何定义" class="headerlink" title="向量的几何定义"></a>向量的几何定义</h4><p>几何直观上，向量是有大小和方向的有向线段，好像一支箭。有向线段的长度表示向量的大小，箭头的指向表示向量的方向。<br>$\require{AMScd}$ \begin{CD} A @&gt;a&gt;&gt; B\end{CD}</p>
+<h4 id="向量的几何定义"><a href="#向量的几何定义" class="headerlink" title="向量的几何定义"></a>向量的几何定义</h4><p>几何直观上，向量是有大小和方向的有向线段，好像一支箭。有向线段的长度表示向量的大小，箭头的指向表示向量的方向。<br>$\require{AMScd}$<br>\begin{CD}<br>    A @&gt;a&gt;&gt; B<br>\end{CD}</p>
 <p><center><code>向量a，A是起点，B是终点</code></center><br>以A为起点，B为终点的有向线段记作$\overrightarrow{AB}$</p>
 <ul>
 <li>向量AB的长度（模）记作$\begin{vmatrix} AB \end{vmatrix} $，长度为0的向量叫做<code>零向量（Zero Vector）</code></li>
-<li>长度为1的向量叫做<code>单位向量（Unit Vector）</code></li>
+<li>长度为1的向量叫做<code>单位向量（Unit Vector）</code>，通常记作$a_{norm}$</li>
 <li>方向相同或相反的向量叫做<code>平行向量</code>。</li>
 </ul>
 <p>为了方便，书写时也用$\vec{a}$、$\vec{b}$表示向量。</p>
+<p>在线性代数中，n维向量的$v=\begin{bmatrix}v_1,v_2,v_3,\cdots,v_n \end{bmatrix}$ 的大小用向量两边加竖线表示，计算公式如下：<br>$$ \begin{Vmatrix}v\end{Vmatrix}=\sqrt{v^2_1+v^2_2+ \cdots +v^2_n}$$</p>
 <h4 id="向量的基本运算"><a href="#向量的基本运算" class="headerlink" title="向量的基本运算"></a>向量的基本运算</h4><p>向量的基本运算有：向量标准化、向量的加法、减法、数乘向量、向量投影、向量的数量积、向量的向量积。</p>
-<h5 id="向量标准化"><a href="#向量标准化" class="headerlink" title="向量标准化"></a>向量标准化</h5><p>单位向量经常被称为标准化向量。所以，非零向量标准化就是将该向量长度变成1，将向量除以它的模即可，</p>
 <blockquote>
+<p><strong>向量标准化</strong><br>单位向量经常被称为标准化向量。所以，非零向量标准化就是将该向量长度变成1，将向量除以它的模即可，这里我看了半天，不懂，先跳过。<br>$$ a_{norm} = \frac{a}{\begin{Vmatrix} a \end{Vmatrix}},a \neq 0 $$</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>向量的加法</strong><br>两个向量相加，将对应分量相加即可。<br>$$ \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix}  + \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix} = \begin{bmatrix} a_1 + b_1 \\ a_2 + b_2 \\ \vdots \\ a_n + b_n \end{bmatrix} $$<br>向量加法的几何解释是：</p>
+<ul>
+<li>三角形法则：将向量的a的尾与向量b的首相连，以a的首为起点，b的尾为终点的有向线段为a+b：</li>
+<li>平行四边形法则：以向量邻边作平行四边形，<code>同一起点</code>的对角线的有向线段就是a+b</li>
+</ul>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>向量的减法</strong><br>不解释<br>$$ \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix}  - \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix} = \begin{bmatrix} a_1 - b_1 \\ a_2 - b_2 \\ \vdots \\ a_n - b_n \end{bmatrix} $$<br>也可以用三角形法则解释。以向量a、b作邻边三角形，从b的尾端向a的尾端作的有向线段就是a-b</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>数乘以向量</strong><br>将没个向量的分量与数相乘即可。<br>$$ k \times  \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix} = \begin{bmatrix} kb_1 \\ ka_2 \\ \vdots \\ ka_n \end{bmatrix} $$<br>注意：<code>数量不能和向量相加</code><br>数k乘以向量a的几何意义是将向量a的长度缩小或者放大了k倍。方向与a相同(k&gt;0)或者相反(k&lt;0)</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>向量投影</strong><br>设非零向量a、b，</p>
 </blockquote>
 <h2 id="后语"><a href="#后语" class="headerlink" title="后语"></a>后语</h2><p><i>在这个网页上写这个公式头都大了</i></p>
 <p>我从没想过有一天有如此高涨的学习热情，以前说白了<em>唯利是图</em>，比如外语吧，我只会学英语，这不是专注，只是一种功利的惰性。如今我同时学四五门语言你敢信？虽然很垃圾，但是这是出于一种对未知的渴望。于是，我把自己的输入法给改了，初涉了五笔、二笔、仓颉、双拼。兼顾效率的情况下，我选择了加加双拼。这是一种革命。当然有人要说我无聊了，其实这个可以提高打字速度。也不难惊奇我居然毕业了还去学数学了。<br>大学专业是软件工程，中专学的是C语言，大学学JAVA我就很不开心。而现在，Go、swift、Python、Scala一些可能无人问津的编程语言都想了解和学习，我突然醒悟，这才是一个创造者呀，对于我的职业来说，也应该如此进取。不然谈何发展？这些年计算机之所以发展这么快，离不开那些对知识渴望的先驱者。</p>
@@ -468,9 +489,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
-          
             <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       
@@ -682,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量与矩阵"><span class="nav-text">向量与矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#向量"><span class="nav-text">向量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的基本概念"><span class="nav-text">向量的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的几何定义"><span class="nav-text">向量的几何定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的基本运算"><span class="nav-text">向量的基本运算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#向量标准化"><span class="nav-text">向量标准化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后语"><span class="nav-text">后语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量与矩阵"><span class="nav-text">向量与矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#向量"><span class="nav-text">向量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的基本概念"><span class="nav-text">向量的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的几何定义"><span class="nav-text">向量的几何定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量的基本运算"><span class="nav-text">向量的基本运算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后语"><span class="nav-text">后语</span></a></li></ol></div>
             
 
           </div>
@@ -716,7 +737,7 @@
     
       <span class="post-meta-item-text">全站一共有：&#58;</span>
     
-    <span title="全站一共有：">40854 字</span>
+    <span title="全站一共有：">41236 字</span>
   
 </div>
 
