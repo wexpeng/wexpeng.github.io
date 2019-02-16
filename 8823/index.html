@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置  文字编辑 i:在光标前插入a:在光标后插入o:在">
+<meta name="description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置">
 <meta name="keywords" content="技术,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim的基本配置">
 <meta property="og:url" content="http://we.hewozou.me/8823/index.html">
 <meta property="og:site_name" content="神的笔记">
-<meta property="og:description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置  文字编辑 i:在光标前插入a:在光标后插入o:在">
+<meta property="og:description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-14T03:55:30.986Z">
+<meta property="og:updated_time" content="2019-02-05T14:54:02.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim的基本配置">
-<meta name="twitter:description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置  文字编辑 i:在光标前插入a:在光标后插入o:在">
+<meta name="twitter:description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置">
 
 
 
@@ -438,6 +438,7 @@
 <h3 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h3><blockquote>
 <p><code>k\j\h\l</code>:与<code>上\下\左\右</code>功能键一一对应且兼容<br><code>w</code>:上一个单词<br><code>b</code>:下一个单词<br><code>e</code>:单词尾部<br><code>gg</code>:回到顶部<br><code>G</code>:去文档最底部<br><code>Ctrl+f</code>:上一页<br><code>Ctrl+b</code>:下一页<br><code>:130</code>:跳转到第130行<br><code>0</code>:移动到行首<br><code>$</code>:移动到行尾<br><code>/word</code>：查找word的位置</p>
 </blockquote>
+<a id="more"></a>
 <h3 id="文字编辑"><a href="#文字编辑" class="headerlink" title="文字编辑"></a>文字编辑</h3><blockquote>
 <p><code>i</code>:在光标前插入<br><code>a</code>:在光标后插入<br><code>o</code>:在下一行插入<br><code>r</code>:替换一个字符<br><code>x</code>:删掉一个字符<br><code>cw</code>:替换一个单词<br><code>yy</code>:复制一行，（在前面输入数字，比如100yy，就是复制以下100行）<br><code>dd</code>:删除一行，（同上）<br><code>de</code>:删除一个单词<br><code>p</code>:粘贴<br><code>v</code>:选择范围，（使用y复制、x剪切、p粘贴,或者r替换）<br><code>u</code>:撤销<br><code>:r!date</code>:插入日期，<code>:r</code>是<code>:read</code>的缩写，！是表明要运行一个shell命令，意思是把shell命令的输出写到当前文档里面来，这样我们可以用<code>:r!cat otherfilename</code>把另一个文件传进来<br><code>:w</code>:保存<br><code>:q</code>:退出<br><code>Ctrl+w q</code>:保存并退<br><code>Ctrl+n</code>:自动补全，写代码非常好用，同时还有<code>Ctrl+p</code></p>
 </blockquote>
@@ -449,7 +450,6 @@
 <blockquote>
 <p><code>:sp filename</code>:上下分屏(Ctrl+w s)<br><code>:vsp filename</code>:左右分屏(Ctrl+w v) <strong>提示</strong>：可以多次分屏<br><code>Ctrl+w k\j\h\l</code>:输入Ctrl+w后再输入上下左右即可切换编辑的文件,kjhl和上下左右键的功能一致<br><code>Ctrl+w +</code>:增加高度<br><code>Ctrl+w -</code>:减少高度<br><code>Ctrl+w =</code>:恢复默认</p>
 </blockquote>
-<a id="more"></a>
 <h3 id="文档加密"><a href="#文档加密" class="headerlink" title="文档加密"></a>文档加密</h3><p>请百度，如果觉得对自己无用，请不要浪费时间。</p>
 <h3 id="自定义快捷键"><a href="#自定义快捷键" class="headerlink" title="自定义快捷键"></a>自定义快捷键</h3><p>查看下面的vim配置文件</p>
 <h2 id="vim-配置文件"><a href="#vim-配置文件" class="headerlink" title="vim 配置文件"></a>vim 配置文件</h2><p>vim作为一款数十年口碑极好的编辑器，肯定有它得天独厚的东西，那就是功能完整，全盘自定义，甚至全部的界面。</p>
@@ -601,7 +601,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -612,7 +612,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -736,7 +736,7 @@
     
       <span class="post-meta-item-text">全站一共有：&#58;</span>
     
-    <span title="全站一共有：">41914 字</span>
+    <span title="全站一共有：">42945 字</span>
   
 </div>
 
