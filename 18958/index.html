@@ -94,12 +94,12 @@
 <meta property="og:site_name" content="神的笔记">
 <meta property="og:description" content="利用unix系统中的crontab功能，几乎所有的unix-like都可以使用 首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。 这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。 我们先看一下怎么把这行请求copy下来，以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://we.hewozou.me/images/签到步骤.png">
-<meta property="og:updated_time" content="2019-02-05T14:08:53.000Z">
+<meta property="og:image" content="http://wexpeng.github.io/18958/images/签到步骤.png">
+<meta property="og:updated_time" content="2022-02-25T10:52:59.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Linux定时任务自动签到">
 <meta name="twitter:description" content="利用unix系统中的crontab功能，几乎所有的unix-like都可以使用 首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。 这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。 我们先看一下怎么把这行请求copy下来，以">
-<meta name="twitter:image" content="https://we.hewozou.me/images/签到步骤.png">
+<meta name="twitter:image" content="http://wexpeng.github.io/18958/images/签到步骤.png">
 
 
 
@@ -439,7 +439,7 @@
 <p>首先要获取某个网站的签到网络请求，可以使用google浏览器自带的network功能捕获，拷贝curl链接，这个就是签到请求。</p>
 <p>这里重点是抓包，测试结果要第二天才知道。复制的curl连接可以直接在Linux命令行输入，一般又多个网站的签到需求，建议创建一个crontab文件。</p>
 <p>我们先看一下怎么把这行请求copy下来，以网易云音乐签到为例，这是图片演示：</p>
-<p><img src="https://we.hewozou.me/images/签到步骤.png" alt="copy签到请求的步骤演示图" title="步骤演示图"></p>
+<p><img src="./images/签到步骤.png" alt="copy签到请求的步骤演示图" title="步骤演示图"></p>
 <a id="more"></a>
 <p>得到的粘贴版信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl <span class="string">'https://music.163.com/weapi/point/dailyTask?csrf_token=b7a1c698043d482560f0cce44ff63e53'</span> -H <span class="string">'Origin: https://music.163.com'</span> -H <span class="string">'Accept-Encoding: gzip, deflate, br'</span> -H <span class="string">'Accept-Language: zh-CN,zh;q=0.9'</span> -H <span class="string">'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'</span> -H <span class="string">'Content-Type: application/x-www-form-urlencoded'</span> -H <span class="string">'Accept: */*'</span> -H <span class="string">'Referer: https://music.163.com/discover'</span> -H <span class="string">'Cookie: _iuqxldmzr_=32; _ntes_nnid=747d80cace901d222900369b376b1a67,1532528882594; _ntes_nuid=747d80cace901d222900369b376b1a67; WM_TID=7wCxJdMQq1jsaKAHG9FO6Jv%2BpXC39FjR; __utmc=94650624; __utma=94650624.834439023.1532528883.1532689910.1532693185.12; __utmz=94650624.1532693185.12.12.utmcsr=localhost:4000|utmccn=(referral)|utmcmd=referral|utmcct=/%E3%80%8A%E8%A7%A6%E4%B8%8D%E5%8F%AF%E5%8F%8A%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/; JSESSIONID-WYYY=TfMiNorhJxoNNRHZzsT6I3ytA3SiEkrSMYckUktMqvzNh%2FW%2FMyuee7%2BTI41%2BnR07yCqVUeKxGQHZE%5CKYIguup6nFgRRXnf0drcWJ9Uri%2FTcz%5Cjpws90hcecjvJCJ%2FEkpQjn7UMxP%5CzMk%2BCG7O555SY%2FEV%5CQCrKnJUhRDlZqFTOO%2F%5CaBO%3A1532695189418; WM_NI=2GddNh7DkEcTCh%2BJTG0jODM96M%2F%2FfTEoqlmBokw3nWt6Ki1zAE%2FNJ9LMBR6cBT0GpUi0LZ1B11E9r%2F%2B6%2F5T0TWIzb2F8i95wbtz8wCldeR%2FrcR%2BpHRu8Xkuzm%2BEQKshAY0U%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6ee9bca7dafbbb6b6d26b9a8d81b8c74dbc98abb3c566b2b7bbd9d2728a99a2b3c52af0fea7c3b92af299ac85cd64f59ca5a6e26081b8e5abd74df4b681a5d033f693e1d0e56087b1bf8df04aadb5b9d4ed5db8ea858ab472839be1afc93390938eb3b569828c00a8f35fabf084bbb44af3ef8bdaf125e9eae1d6d73c9889879be13a86e8a7dab87da2acb6d9f649b0bcabb3ae7aa18ee591cb5ab7e8988cf872aff58bb2ca79ac9f97d1d837e2a3; MUSIC_U=81b463b520d57cc36ade08b68cfeac96fccddbfe17f8e76c6e739cda4210db1da7a6212dc58f9f2b37673d28e13b757a8bafcdfe5ad2b092; __remember_me=true; __csrf=b7a1c698043d482560f0cce44ff63e53; __utmb=94650624.4.10.1532693185'</span> -H <span class="string">'Connection: keep-alive'</span> --data <span class="string">'params=IHpPHTtQNwhRrO2qJoTtSJYBcZ6tsV1YruVJ%2B9e0BLB4vAK9%2FUM38I3LTI2Jupe24DsIYDkSFhDEZZJiQdfoTiARxbRPNSuKMtMtvWSzKhXTrb78o9o0BlwoxOKiaD6L&amp;encSecKey=5efc26c359444bea688cff13b45a64f413cb31312d012a82401b5c707e954777090e34e852626747a04f45755e8c1638b8b17dff9ac1121b437d571dba865b344f86b2459efa90b82c24d623fb52ba313d76d59ef361766b07103e32fa7ed96e4ed80f0a0de74a66b437a7f928b60d0481391cfa739c24011559caf738ad0b7c'</span> --compressed</span><br></pre></td></tr></table></figure></p>
 <p>将来如果有高手看到了这行信息，大约可以直接登陆我的网易云账号了。是的，这里面包含登陆信息。</p>
@@ -734,7 +734,7 @@
     
       <span class="post-meta-item-text">全站一共有：&#58;</span>
     
-    <span title="全站一共有：">42946 字</span>
+    <span title="全站一共有：">42814 字</span>
   
 </div>
 
