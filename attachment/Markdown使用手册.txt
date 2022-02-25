@@ -151,10 +151,10 @@ int main(int argc, char const *argv[]){
 ### 链接
 链接可以由两种形式生成：**行内式**和**参考式**。    
 **行内式**：
-> \[Markdown使用手册\]\(https:://we.hewozou.me/Markdown使用手册 "Markdown"\)。
+> \[Markdown使用手册\]\(./Markdown使用手册 "Markdown"\)。
 
 效果：
-> [Markdown使用手册](https:://we.hewozou.me/Markdown使用手册 "Markdown")。
+> [Markdown使用手册](./Markdown使用手册 "Markdown")。
 
 比如：
 \[Wexpeng的博客\]\[1\]    
@@ -166,7 +166,7 @@ int main(int argc, char const *argv[]){
 > [Wexpeng的博客][1]
 > [Wexpeng电子邮箱][2]
 
-[1]:https://we.hewozou.me "Markdown"
+[1]:https://wexpeng.github.io "Markdown"
 [2]:mailto://wexpeng@gmail.com "Email"
 
 
@@ -175,10 +175,10 @@ int main(int argc, char const *argv[]){
 添加图片的形式和链接相似，只需在把链接换成图片链接，再在最前方加一个`！`。、
 
 比如
-\!\[这里是在没有获得到图片文件的时候显示的文字\](http://we.hewozou.me/images/avatar.gif "这里是图片描述，可以留空")
+\!\[这里是在没有获得到图片文件的时候显示的文字\](./images/avatar.gif "这里是图片描述，可以留空")
 
 效果
-![这里是在没有获得到图片文件的时候显示的文字](http://we.hewozou.me/images/avatar.gif "这里是图片描述，可以留空")
+![这里是在没有获得到图片文件的时候显示的文字](./images/avatar.gif "这里是图片描述，可以留空")
 
 Markdown是一种纯文本格式，图片的方式来自于引用。注意，地址通常要是互联网上的一个永久地址。
 ### 符号
@@ -222,7 +222,7 @@ Markdown是一种纯文本格式，图片的方式来自于引用。注意，地
 |Twitter| https://twitter.com/wexpeng |
 |Facebook| https://www.facebook.com/wexpeng |
 |Instagram| https://instagram.com/wexpeng |
-|Blog|[http://we.hewozou.me](http://we.hewozou.me "Markdown")|
+|Blog|[.](. "Markdown")|
 -->
 
 
