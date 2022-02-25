@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png?v=6.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=6.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=6.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="博客相关," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="标记语言，HTML的超集html就是网页文件，意味着，md文件可以兼容网页格式其实最终的显示样子就是转换成HTML内容,源文件比word文件小，比网页文件易读，同时又可以包含丰富的格式信息，逐渐成为趋势 正文本文作为常用手册，主要用于熟悉语法和使用高级语法的参考。">
+<meta name="keywords" content="博客相关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown使用手册">
+<meta property="og:url" content="http://wexpeng.github.io/8436/index.html">
+<meta property="og:site_name" content="神的笔记">
+<meta property="og:description" content="标记语言，HTML的超集html就是网页文件，意味着，md文件可以兼容网页格式其实最终的显示样子就是转换成HTML内容,源文件比word文件小，比网页文件易读，同时又可以包含丰富的格式信息，逐渐成为趋势 正文本文作为常用手册，主要用于熟悉语法和使用高级语法的参考。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://wexpeng.github.io/images/markdown-假设这是一张图片.png">
+<meta property="og:updated_time" content="2019-01-20T03:50:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown使用手册">
+<meta name="twitter:description" content="标记语言，HTML的超集html就是网页文件，意味着，md文件可以兼容网页格式其实最终的显示样子就是转换成HTML内容,源文件比word文件小，比网页文件易读，同时又可以包含丰富的格式信息，逐渐成为趋势 正文本文作为常用手册，主要用于熟悉语法和使用高级语法的参考。">
+<meta name="twitter:image" content="http://wexpeng.github.io/images/markdown-假设这是一张图片.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.1.4',
+    sidebar: {"position":"left","display":"post","offset":14,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '彭伟轩'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+
+
+
+
+  <title>Markdown使用手册 | 神的笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">神的笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Wexpeng's Notebook</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于执笔人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-messages">
+          <a href="/messages/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wexpeng.github.io/8436/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彭伟轩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神的笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Markdown使用手册</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="1997-03-08T15:56:02+08:00">
+                1997-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/8436/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/8436/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                
+                  <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+
+                <span title="字数统计">
+                  2,283 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+          
+
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+    <div class="post-body" itemprop="articleBody"> 
+
+      
+      
+
+      
+        <p>标记语言，HTML的超集<sub>html就是网页文件，意味着，md文件可以兼容网页格式</sub><br>其实最终的显示样子就是转换成HTML内容,源文件比word文件小，比网页文件易读，同时又可以包含丰富的格式信息，逐渐成为趋势</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>本文作为常用手册，主要用于熟悉语法和使用高级语法的参考。</p>
+<a id="more"></a>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>两种形式：<br>1）使用<code>=</code>和<code>-</code>标记一级和二级标题。</p>
+<blockquote>
+<p>一级标题<br><code>=========</code><br>二级标题<br><code>---------</code></p>
+</blockquote>
+<p>2）使用<code>#</code>，可表示1-6级标题。</p>
+<blockquote>
+<p># 一级标题<br>## 二级标题<br>### 三级标题<br>#### 四级标题<br>##### 五级标题<br>###### 六级标题    </p>
+</blockquote>
+<p>正确使用标题的好处可以在文档中直接生成目录。如果文档需要目录直接在需要目录的地方输入<code>[TOC]</code>即可，此功能office Word也有，但是需要使用格式工具把所有标题设置好，而md文档，即使用#号归类。非常简洁和方便。</p>
+<hr>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在段落的每行或者只在第一行使用符号<code>&gt;</code>,还可使用多个嵌套引用，如：<br>> 区块引用<br>>&gt; 嵌套引用</p>
+<p><strong>效果</strong></p>
+<blockquote>
+<p>区块引用</p>
+<blockquote>
+<p>嵌套引用</p>
+</blockquote>
+</blockquote>
+<p>不建议嵌套引用，当然在语法上是没有错误的。</p>
+<hr>
+<h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><p>代码区块的建立是在<strong>每行加上4个空格</strong>或者一个制表符（如同写代码一样）。如<br>普通段落：</p>
+<p>#include &lt;stdio.h&gt;<br>int main(int argc, char const *argv[]){<br>    printf(“%s\n”,”这里是markdown” );<br>    return 0;<br>}</p>
+<p>代码区块：</p>
+<pre><code>#include &lt;stdio.h&gt;
+int main(int argc, char const *argv[])
+{
+    /* code */
+    printf(&quot;%s\n&quot;,&quot;这里是markdown&quot; );
+    return 0;
+}
+</code></pre><p>当然在此博客中有另外一种方式，<strong>注意这里属于markdown的扩展了</strong>。即在代码的第一行和最后一行加上```,上下各三个。在第一行三个符号后面还可以写上不同的程序语言，以便解析不同的高亮样式，非常方便。</p>
+<p>书写C语言列子<br>```C<br>#include &lt;stdio.h&gt;<br>int main(int argc, char const *argv[]){<br>    /* 注释的效果也不错 */<br>    printf(“%s\n”,”这里是markdown_ext” );<br>    return 0;<br>}<br>```</p>
+<p><strong>效果</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span>&#123;</span><br><span class="line">	<span class="comment">/* 注释的效果也不错 */</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s\n"</span>,<span class="string">"这里是markdown_ext"</span> );</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>在强调内容两侧分别加上<code>*</code>或者<code>_</code>，如：</p>
+<blockquote>
+<p>*斜体*，_斜体_<br>**粗体**，__粗体__</p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p><em>斜体</em>，_斜体_<br><strong>粗体</strong>，<strong>粗体</strong></p>
+</blockquote>
+<p><strong>注意</strong>:需要和普通段落之间存在空行。同时中文下不建议使用斜体，当然在语法上是没有错误的</p>
+<hr>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用<code>*</code>、<code>+</code>、或<code>-</code>标记，如：<br>- 第一项<br>+ 第二项<br>* 第三项</p>
+<p><strong>注意</strong>：标记后面最少有一个_空格_或<em>制表符</em>。</p>
+<p>效果：</p>
+<blockquote>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code>，如：</p>
+<p>1 . 第一项<br>2 . 第二项<br>3 . 第三项    </p>
+<p>效果：</p>
+<blockquote>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>分割线最常使用就是三个或以上<code>*</code>，还可以使用<code>-</code>和<code>_</code>。效果相同。</p>
+<p>本文中每一小节都有分割线，使用三个<code>*</code>号。</p>
+<hr>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接可以由两种形式生成：<strong>行内式</strong>和<strong>参考式</strong>。<br><strong>行内式</strong>：</p>
+<blockquote>
+<p>[Markdown使用手册](https:://we.hewozou.me/Markdown使用手册 “Markdown”)。</p>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<p><a href="https:://we.hewozou.me/Markdown使用手册" title="Markdown" target="_blank" rel="noopener">Markdown使用手册</a>。</p>
+</blockquote>
+<p>比如：<br>[Wexpeng的博客][1]<br>[wexpeng的电子邮箱][2]<br>[1]:<a href="https://we.hewozou.me" target="_blank" rel="noopener">https://we.hewozou.me</a> “Blog”<br>[2]:mailto:<a href="mailto://wexpeng@gmail.com" target="_blank" rel="noopener">//wexpeng@gmail.com</a> “Email”</p>
+<p>效果：</p>
+<blockquote>
+<p><a href="https://we.hewozou.me" title="Markdown" target="_blank" rel="noopener">Wexpeng的博客</a><br><a href="mailto://wexpeng@gmail.com" title="Email" target="_blank" rel="noopener">Wexpeng电子邮箱</a></p>
+</blockquote>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>添加图片的形式和链接相似，只需在把链接换成图片链接，再在最前方加一个<code>！</code>。、</p>
+<p>比如<br><strong>![</strong>这里是在没有获得到图片文件的时候显示的文字<strong>](</strong><a href="https://we.hewozou.me/images/img.png" target="_blank" rel="noopener">https://we.hewozou.me/images/img.png</a> “这里是图片描述，可以留空”<strong>)</strong></p>
+<p>效果<br><img src="../images/markdown-假设这是一张图片.png" alt="这里是在没有获得到图片文件的时候显示的文字" title="这里是图片描述，可以留空"></p>
+<p>Markdown是一种纯文本格式，图片的方式来自于引用。注意，地址通常要是互联网上的一个永久地址。</p>
+<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3><h4 id="转义符（反斜杠）"><a href="#转义符（反斜杠）" class="headerlink" title="转义符（反斜杠）\"></a>转义符（反斜杠）<strong>\</strong></h4><p>要显示那些标签就必须用到转义符号，</p>
+<p>相当于<strong>反转义</strong>作用。使符号成为普通符号。</p>
+<h4 id="高亮符（点）"><a href="#高亮符（点）" class="headerlink" title="高亮符（点）`"></a>高亮符（点）<strong>`</strong></h4><p>这个符号通常在电脑主键盘数字1的左边，起到标记作用。<br>效果如下:<br>在这句话中，<code>我是高亮的文字</code>，但是我不是。</p>
+<p>以上基本是所有传统markdown的语法。</p>
+<hr>
+<p><strong>注意</strong>：不同的Markdown解释器或工具对相应语法解释效果不尽相同，且多数工具有功能更强大的语法规则，具体可参见工具的使用说明。</p>
+<hr>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>这里有一些非传统的markdown语法，即在一些特定的markdown编辑器才受支持。<br>关于扩展语法可参见具体工具的使用说明。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>用<code>|</code>表示表格纵向边界，表头和表内容用<code>-</code>隔开，并可用<code>:</code>进行对齐设置，两边都有<code>:</code>则表示居中，若不加<code>:</code>则默认左对齐。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">可以找到我的地方</th>
+<th style="text-align:left">链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">QQ空间</td>
+<td style="text-align:left"><a href="https://user.qzone.qq.com/1962311496/infocenter" target="_blank" rel="noopener">https://user.qzone.qq.com/1962311496/infocenter</a></td>
+</tr>
+<tr>
+<td style="text-align:center">微博</td>
+<td style="text-align:left"><a href="https://weibo.com/bsbm" target="_blank" rel="noopener">https://weibo.com/bsbm</a></td>
+</tr>
+<tr>
+<td style="text-align:center">网易云音乐</td>
+<td style="text-align:left"><a href="http://music.163.com/#/user/home?id=79199600" target="_blank" rel="noopener">http://music.163.com/#/user/home?id=79199600</a></td>
+</tr>
+<tr>
+<td style="text-align:center">GitHub</td>
+<td style="text-align:left"><a href="https://github.com/wexpeng" target="_blank" rel="noopener">https://github.com/wexpeng</a></td>
+</tr>
+<tr>
+<td style="text-align:center">知乎</td>
+<td style="text-align:left"><a href="https://www.zhihu.com/people/wexoeng/activities" target="_blank" rel="noopener">https://www.zhihu.com/people/wexoeng/activities</a></td>
+</tr>
+</tbody>
+</table>
+<!--
+|Twitter| https://twitter.com/wexpeng |
+|Facebook| https://www.facebook.com/wexpeng |
+|Instagram| https://instagram.com/wexpeng |
+|Blog|[http://we.hewozou.me](http://we.hewozou.me "Markdown")|
+-->
+<h3 id="LaTeX公式"><a href="#LaTeX公式" class="headerlink" title="LaTeX公式"></a>LaTeX公式</h3><p>md在学术界的用途是非常广泛的，各种各样复杂的公式需要记录。此博客并无此需求。同时因为其复杂性与专业性，在此不做讲解（我不会emmmm）</p>
+<p>(更新：这里需要大篇幅来讲解，大约)</p>
+<p>在此做个推荐：<a href="https://www.zybuluo.com/codeep/note/163962" target="_blank" rel="noopener">Cmd Markdown 公式指导手册</a></p>
+<h3 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h3><p>-[ ] 未完成事项<br>-[x] 已完成事项</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> <strong>详细说明</strong><ul>
+<li style="list-style: none"><input type="checkbox"> <strong><code>-</code></strong>后面需要一个空格<sup>仅仅针对此的博客，一般渲染器没有此要求</sup></li>
+<li style="list-style: none"><input type="checkbox" checked> 已完成事项在<strong><code>[]</code></strong>括号内是一个小写的x</li>
+<li style="list-style: none"><input type="checkbox"> 在未完成事项中没有x但是需要一个空格 </li>
+<li style="list-style: none"><input type="checkbox" checked> 详细描述前面也需要一个空格，如果没有正常显示，请注意其前面的描述符是否一共占有6个字符</li>
+</ul>
+</li>
+<li style="list-style: none"><input type="checkbox"> <strong>太平洋旅行准备</strong><ul>
+<li style="list-style: none"><input type="checkbox"> 准备邮轮上需要携带的物品</li>
+<li style="list-style: none"><input type="checkbox"> 准备钱</li>
+<li style="list-style: none"><input type="checkbox"> 勾搭一个外国小姑娘</li>
+<li style="list-style: none"><input type="checkbox" checked> 做梦</li>
+<li style="list-style: none"><input type="checkbox" checked> 醒醒</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h3><p>前面有说HTML是Markdown的一个子集，理所当然HTML中的标签也是能够直接使用的<br>比如</p>
+<ul>
+<li>大标题 - <code>&lt;h1&gt;我是大标题&lt;/h1&gt;</code></li>
+<li>居中 - <code>&lt;center&gt;我是居中的块&lt;/center&gt;</code></li>
+<li>靠右 - <p style="text-align: left;">我是靠右的块</p></li>
+</ul>
+<p>为了生成目录的规范，这里不做演示效果。markdown文件还是具备自动生成目录效果的<br>若想在文章最前面显示目录，使用<br><code>[TOC]</code><sub>同样非传统md标签，仅在某些md编辑器有效</sub></p>
+<h2 id="工具推荐"><a href="#工具推荐" class="headerlink" title="工具推荐"></a>工具推荐</h2><h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p>浏览器版本最大的好处是跨平台<code>markdown-here</code>等非常方便。缺点是国内无法访问。</p>
+<h3 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h3><p><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">Cmd Markdown</a>和<a href="https://maxiang.io" target="_blank" rel="noopener">马克飞象</a>，后者可以绑定印象笔记，不过收费。</p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p><a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkdownPad</a>，不过免费版的体验不是很好。</p>
+<h3 id="macOs"><a href="#macOs" class="headerlink" title="macOs"></a>macOs</h3><p><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a> 是中国人开发的。 在AppStore有很多，但是好用的很贵。</p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p><a href="https://pypi.org/project/ReText/" target="_blank" rel="noopener">ReText</a></p>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p>没有Android手机，未曾使用过</p>
+<h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3><p><a href="https://zh.mweb.im/" target="_blank" rel="noopener">MWeb</a>，可以保存到iCloud、Dropbox，收费.免费版可保存在沙盒中</p>
+<p>我们可以问一个问题，其发明者用什么来写Markdown。其实markdown发明的目的是为了简单，而追求工具已经脱离了简单的范畴了。不过简单不代表好用嘛，重点还是要达到我们的目的，这个需要进行很多的尝试，每个人的喜好是不同的。</p>
+<p>我用的就两个 <strong>SublimeText</strong>和<strong>Cmd Markdown</strong><br>前者只是单纯的编辑器，并无渲染效果，后者必须联网。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>Markdown如今很多的公司在使用，同时，各家为markdown增加了很多不同的功能。可同样因此，markdown语法存在一定程度的碎片化。</p>
+<p>不成规矩不成方圆，一群科技公司发起的Standard Markdown项目，准备建立Markdown标准，没想到惹怒了健在的创始人<a href="http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/" target="_blank" rel="noopener">John Gruber</a>,Gruber认为无论这些人在标准化上面做什么努力，都不可以称其为Markdown。因此他要求标准化团队更换“Standard Markdown”的名字，关闭同名网站并且对他公开道歉。</p>
+<p>最后，标准化团队决定新标准取名为CommonMark</p>
+<hr>
+<p>我很烦这些没有标准的东西，就像当年野蛮生长的浏览器，在这几年才终于被W3C组织标准化了。标准的好处是显而易见的，中国的古语云：不成规矩，没有方圆。有了尺规，什么图形都能画出来。我不了解这件事背后的故事，但是总是感觉CommonMark不是markdown一样，原作者已有的项目，后来人直接fork改进不就好了吗？为什么要重复造轮子？而且明显没有和已经健在的一位创始人联系，难怪其在twitter上用<a href="https://twitter.com/markdown" target="_blank" rel="noopener">@markdown</a>这个账号去表达自己的强烈不满。</p>
+<p>不管是是非非，作为用户，感谢他们。</p>
+<p>另外，此文章就是用markdown构建，下载也许对学习有帮助，下载请<a href="../attachment/Markdown使用手册.txt">右击另存为</a>，之后修改后缀名为<strong>.md</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客相关/" rel="tag"># 博客相关</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/54095/" rel="next" title="神说要有光，于是有了我">
+                <i class="fa fa-chevron-left"></i> 神说要有光，于是有了我
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/30641/" rel="prev" title="LateX公式使用手册">
+                LateX公式使用手册 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="彭伟轩" />
+            
+              <p class="site-author-name" itemprop="name">彭伟轩</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="tel:18229738322" target="_blank" title="电话">
+                      
+                        <i class="fa fa-fw fa-phone"></i>电话</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/wexoeng/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://user.qzone.qq.com/1962311496/infocenter" target="_blank" title="QQ空间">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ空间</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/user/home?id=79199600" target="_blank" title="网易音乐">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="../64785" title="博客创建初心" target="_blank">博客创建初心</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="../8436" title="MD使用" target="_blank">MD使用</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-text">标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码展示"><span class="nav-text">代码展示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调"><span class="nav-text">强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-text">有序列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割线"><span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-text">图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#符号"><span class="nav-text">符号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#转义符（反斜杠）"><span class="nav-text">转义符（反斜杠）\</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高亮符（点）"><span class="nav-text">高亮符（点）`</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它"><span class="nav-text">其它</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LaTeX公式"><span class="nav-text">LaTeX公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#待办事项"><span class="nav-text">待办事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML标签"><span class="nav-text">HTML标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具推荐"><span class="nav-text">工具推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome"><span class="nav-text">Chrome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在线"><span class="nav-text">在线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows"><span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#macOs"><span class="nav-text">macOs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux"><span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS"><span class="nav-text">IOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">彭伟轩</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站一共有：&#58;</span>
+    
+    <span title="全站一共有：">42946 字</span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ADroHFiarWbfu8gAm7EF2520-gzGzoHsz',
+        appKey: 'mswfXHnBHPsjk2PxogkBqaYW',
+        placeholder: '留言内容',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png?v=6.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=6.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=6.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="技术,Linux," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置">
+<meta name="keywords" content="技术,Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim的基本配置">
+<meta property="og:url" content="http://wexpeng.github.io/8823/index.html">
+<meta property="og:site_name" content="神的笔记">
+<meta property="og:description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-05T14:54:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vim的基本配置">
+<meta name="twitter:description" content="昨天重装了系统，配置了许多细枝末节，终于到了vim。 vim 基础操作命令模式下常用命令： 移动光标 k\j\h\l:与上\下\左\右功能键一一对应且兼容w:上一个单词b:下一个单词e:单词尾部gg:回到顶部G:去文档最底部Ctrl+f:上一页Ctrl+b:下一页:130:跳转到第130行0:移动到行首$:移动到行尾/word：查找word的位置">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.1.4',
+    sidebar: {"position":"left","display":"post","offset":14,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '彭伟轩'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+
+
+
+
+  <title>vim的基本配置 | 神的笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">神的笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Wexpeng's Notebook</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于执笔人
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-messages">
+          <a href="/messages/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wexpeng.github.io/8823/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彭伟轩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神的笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">vim的基本配置</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T00:41:58+08:00">
+                2018-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/8823/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/8823/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                
+                  <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+
+                <span title="字数统计">
+                  3,192 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+          
+
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+    <div class="post-body" itemprop="articleBody"> 
+
+      
+      
+
+      
+        <p>昨天重装了系统，配置了许多细枝末节，终于到了vim。</p>
+<h2 id="vim-基础操作"><a href="#vim-基础操作" class="headerlink" title="vim 基础操作"></a>vim 基础操作</h2><p>命令模式下常用命令：</p>
+<h3 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h3><blockquote>
+<p><code>k\j\h\l</code>:与<code>上\下\左\右</code>功能键一一对应且兼容<br><code>w</code>:上一个单词<br><code>b</code>:下一个单词<br><code>e</code>:单词尾部<br><code>gg</code>:回到顶部<br><code>G</code>:去文档最底部<br><code>Ctrl+f</code>:上一页<br><code>Ctrl+b</code>:下一页<br><code>:130</code>:跳转到第130行<br><code>0</code>:移动到行首<br><code>$</code>:移动到行尾<br><code>/word</code>：查找word的位置</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="文字编辑"><a href="#文字编辑" class="headerlink" title="文字编辑"></a>文字编辑</h3><blockquote>
+<p><code>i</code>:在光标前插入<br><code>a</code>:在光标后插入<br><code>o</code>:在下一行插入<br><code>r</code>:替换一个字符<br><code>x</code>:删掉一个字符<br><code>cw</code>:替换一个单词<br><code>yy</code>:复制一行，（在前面输入数字，比如100yy，就是复制以下100行）<br><code>dd</code>:删除一行，（同上）<br><code>de</code>:删除一个单词<br><code>p</code>:粘贴<br><code>v</code>:选择范围，（使用y复制、x剪切、p粘贴,或者r替换）<br><code>u</code>:撤销<br><code>:r!date</code>:插入日期，<code>:r</code>是<code>:read</code>的缩写，！是表明要运行一个shell命令，意思是把shell命令的输出写到当前文档里面来，这样我们可以用<code>:r!cat otherfilename</code>把另一个文件传进来<br><code>:w</code>:保存<br><code>:q</code>:退出<br><code>Ctrl+w q</code>:保存并退<br><code>Ctrl+n</code>:自动补全，写代码非常好用，同时还有<code>Ctrl+p</code></p>
+</blockquote>
+<h2 id="vim-高级操作"><a href="#vim-高级操作" class="headerlink" title="vim 高级操作"></a>vim 高级操作</h2><h3 id="查找替换"><a href="#查找替换" class="headerlink" title="查找替换"></a>查找替换</h3><blockquote>
+<p><code>:s/old/new</code> :当前行的第一个old替换为new<br><code>:s/old/new/g</code> :当前行的所有old替换为new<br><code>:100,200s/old/new/g</code> :替换第100行到200行的old为new<br><code>:%s/old/new/g</code> : 替换全文的old为new</p>
+</blockquote>
+<p><strong>注意</strong>全部没有空格</p>
+<h3 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h3><p>分屏最好用的地方在于多文件编辑，我们可以输入<code>:E</code>来打开一个窗口选择当前目录多文件。也可以直接用下面的命令打开一个文件。</p>
+<blockquote>
+<p><code>:sp filename</code>:上下分屏(Ctrl+w s)<br><code>:vsp filename</code>:左右分屏(Ctrl+w v) <strong>提示</strong>：可以多次分屏<br><code>Ctrl+w k\j\h\l</code>:输入Ctrl+w后再输入上下左右即可切换编辑的文件,kjhl和上下左右键的功能一致<br><code>Ctrl+w +</code>:增加高度<br><code>Ctrl+w -</code>:减少高度<br><code>Ctrl+w =</code>:恢复默认</p>
+</blockquote>
+<h3 id="文档加密"><a href="#文档加密" class="headerlink" title="文档加密"></a>文档加密</h3><p>请百度，如果觉得对自己无用，请不要浪费时间。</p>
+<h3 id="自定义快捷键"><a href="#自定义快捷键" class="headerlink" title="自定义快捷键"></a>自定义快捷键</h3><p>查看下面的vim配置文件</p>
+<h2 id="vim-配置文件"><a href="#vim-配置文件" class="headerlink" title="vim 配置文件"></a>vim 配置文件</h2><p>vim作为一款数十年口碑极好的编辑器，肯定有它得天独厚的东西，那就是功能完整，全盘自定义，甚至全部的界面。</p>
+<p>此文件保存为<code>.vimrc</code>的纯文本文档放在用户根目录下。即可生效.<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"显示行号</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"语法高亮</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"配色方案，方案可以在网上下载</span></span><br><span class="line"><span class="comment">"vim自己提供的在“/usr/share/vim/vim-least/colors”目录下</span></span><br><span class="line"><span class="keyword">colorscheme</span> monokai</span><br><span class="line"></span><br><span class="line"><span class="comment">"使用vim的键盘模式,即不兼容vi，我没有开启</span></span><br><span class="line"><span class="comment">"set nocompatible</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"高亮当前行与列</span></span><br><span class="line"><span class="keyword">set</span> cursorline</span><br><span class="line"><span class="comment">"set cursorcolumn</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"没有保存或文件只读时弹出确认</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">confirm</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"鼠标可用</span></span><br><span class="line"><span class="keyword">set</span> mouse=<span class="keyword">a</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"文件自动检测外部更改</span></span><br><span class="line"><span class="keyword">set</span> autoread</span><br><span class="line"></span><br><span class="line"><span class="comment">"自动对齐</span></span><br><span class="line"><span class="keyword">set</span> autoindent</span><br><span class="line"></span><br><span class="line"><span class="comment">"智能缩进</span></span><br><span class="line"><span class="keyword">set</span> smartindent</span><br><span class="line"></span><br><span class="line"><span class="comment">"高亮查找匹配</span></span><br><span class="line"><span class="keyword">set</span> hlsearch</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示匹配</span></span><br><span class="line"><span class="keyword">set</span> showmatch</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示标尺，就是在右下角显示光标位置</span></span><br><span class="line"><span class="keyword">set</span> ruler</span><br><span class="line"></span><br><span class="line"><span class="comment">"不要闪烁</span></span><br><span class="line"><span class="keyword">set</span> novisualbell</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示输入的命令</span></span><br><span class="line"><span class="keyword">set</span> showcmd</span><br><span class="line"></span><br><span class="line"><span class="comment">"tab缩进</span></span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> expandtab</span><br><span class="line"><span class="keyword">set</span> smarttab</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">"键盘映射</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"连续输入‘//’，vim会执行‘0，i，#’三个键，即：在这一行最前面输入“#”</span></span><br><span class="line"><span class="keyword">map</span> // <span class="number">0</span>i#</span><br><span class="line"><span class="keyword">imap</span> // <span class="symbol">&lt;ESC&gt;</span><span class="number">0</span>i#</span><br><span class="line"><span class="keyword">vmap</span> // <span class="symbol">&lt;ESC&gt;</span><span class="number">0</span>i#</span><br><span class="line"></span><br><span class="line"><span class="comment">"F12快捷键，快速编译执行文件</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F12&gt;</span> : <span class="keyword">call</span> RunGcc()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">imap</span> <span class="symbol">&lt;F12&gt;</span> <span class="symbol">&lt;ESC&gt;</span>: <span class="keyword">call</span> RunGcc()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">vmap</span> <span class="symbol">&lt;F12&gt;</span> <span class="symbol">&lt;ESC&gt;</span>: <span class="keyword">call</span> RunGcc()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line">func! RunGcc()</span><br><span class="line">    exec <span class="string">"w"</span></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">"c"</span></span><br><span class="line">        exec <span class="string">"!g++ % -o %&lt;"</span></span><br><span class="line">        exec <span class="string">"!./%&lt;"</span></span><br><span class="line">    <span class="keyword">elseif</span> &amp;<span class="keyword">filetype</span> == <span class="string">"java"</span></span><br><span class="line">        exec <span class="string">"!javac %"</span></span><br><span class="line">        exec <span class="string">"!java %&lt;"</span></span><br><span class="line">    <span class="keyword">elseif</span> &amp;<span class="keyword">filetype</span> == <span class="string">"python"</span></span><br><span class="line">        exec <span class="string">"!python %"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line">endfunc</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>后面的键盘映射可以看出，vim是一个可以编程的编译器。<br>这里不做详细解释，如有需要，可以留言或者联系我。</p>
+</blockquote>
+<h3 id="vim-配色与高亮"><a href="#vim-配色与高亮" class="headerlink" title="vim 配色与高亮"></a>vim 配色与高亮</h3><p>vim自己提供的配色方案，均不太喜欢，所以使用sublime上的monokai配色方案。</p>
+<p>方案文件：(保存为：<code>/usr/share/vim/vim-laest/colors/monikai.vim</code>)<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" Vim color file</span></span><br><span class="line"><span class="comment">" Converted from Textmate theme Monokai using Coloration v0.3.2 (http://github.com/sickill/coloration)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> background=dark</span><br><span class="line"><span class="keyword">highlight</span> clear</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">exists</span>(<span class="string">"syntax_on"</span>)</span><br><span class="line">  <span class="keyword">syntax</span> reset</span><br><span class="line"><span class="keyword">endif</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> t_Co=<span class="number">256</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:colors_name</span> = <span class="string">"monokai"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">hi</span> Cursor ctermfg=<span class="number">235</span> ctermbg=<span class="number">231</span> cterm=NONE guifg=#<span class="number">272822</span> guibg=#f8f8f0 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Visual ctermfg=NONE ctermbg=<span class="number">59</span> cterm=NONE guifg=NONE guibg=#<span class="number">49483</span><span class="keyword">e</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> CursorLine ctermfg=NONE ctermbg=<span class="number">237</span> cterm=NONE guifg=NONE guibg=#<span class="number">3</span>c3d37 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> CursorColumn ctermfg=NONE ctermbg=<span class="number">237</span> cterm=NONE guifg=NONE guibg=#<span class="number">3</span>c3d37 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> ColorColumn ctermfg=NONE ctermbg=<span class="number">237</span> cterm=NONE guifg=NONE guibg=#<span class="number">3</span>c3d37 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> LineNr ctermfg=<span class="number">102</span> ctermbg=<span class="number">237</span> cterm=NONE guifg=#<span class="number">90908</span><span class="keyword">a</span> guibg=#<span class="number">3</span>c3d37 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> VertSplit ctermfg=<span class="number">241</span> ctermbg=<span class="number">241</span> cterm=NONE guifg=#<span class="number">64645</span><span class="keyword">e</span> guibg=#<span class="number">64645</span><span class="keyword">e</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> MatchParen ctermfg=<span class="number">197</span> ctermbg=NONE cterm=underline guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=underline</span><br><span class="line"><span class="keyword">hi</span> StatusLine ctermfg=<span class="number">231</span> ctermbg=<span class="number">241</span> cterm=bold guifg=#f8f8f2 guibg=#<span class="number">64645</span><span class="keyword">e</span> <span class="keyword">gui</span>=bold</span><br><span class="line"><span class="keyword">hi</span> StatusLineNC ctermfg=<span class="number">231</span> ctermbg=<span class="number">241</span> cterm=NONE guifg=#f8f8f2 guibg=#<span class="number">64645</span><span class="keyword">e</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> PmenuSel ctermfg=NONE ctermbg=<span class="number">59</span> cterm=NONE guifg=NONE guibg=#<span class="number">49483</span><span class="keyword">e</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> IncSearch term=<span class="built_in">reverse</span> cterm=<span class="built_in">reverse</span> ctermfg=<span class="number">193</span> ctermbg=<span class="number">16</span> <span class="keyword">gui</span>=<span class="built_in">reverse</span> guifg=#C4BE89 guibg=#<span class="number">000000</span></span><br><span class="line"><span class="keyword">hi</span> Search term=<span class="built_in">reverse</span> cterm=NONE ctermfg=<span class="number">231</span> ctermbg=<span class="number">24</span> <span class="keyword">gui</span>=NONE guifg=#f8f8f2 guibg=#<span class="number">204</span>a87</span><br><span class="line"><span class="keyword">hi</span> Directory ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Folded ctermfg=<span class="number">242</span> ctermbg=<span class="number">235</span> cterm=NONE guifg=#<span class="number">75715</span><span class="keyword">e</span> guibg=#<span class="number">272822</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> SignColumn ctermfg=NONE ctermbg=<span class="number">237</span> cterm=NONE guifg=NONE guibg=#<span class="number">3</span>c3d37 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Normal ctermfg=<span class="number">231</span> ctermbg=<span class="number">235</span> cterm=NONE guifg=#f8f8f2 guibg=#<span class="number">272822</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Boolean ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Character ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Comment ctermfg=<span class="number">242</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">75715</span><span class="keyword">e</span> guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Conditional ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Define ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> DiffAdd ctermfg=<span class="number">231</span> ctermbg=<span class="number">64</span> cterm=bold guifg=#f8f8f2 guibg=#<span class="number">46830</span><span class="keyword">c</span> <span class="keyword">gui</span>=bold</span><br><span class="line"><span class="keyword">hi</span> DiffDelete ctermfg=<span class="number">88</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">8</span>b0807 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#<span class="number">243955</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> DiffText ctermfg=<span class="number">231</span> ctermbg=<span class="number">24</span> cterm=bold guifg=#f8f8f2 guibg=#<span class="number">204</span>a87 <span class="keyword">gui</span>=bold</span><br><span class="line"><span class="keyword">hi</span> ErrorMsg ctermfg=<span class="number">231</span> ctermbg=<span class="number">197</span> cterm=NONE guifg=#f8f8f0 guibg=#f92672 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> WarningMsg ctermfg=<span class="number">231</span> ctermbg=<span class="number">197</span> cterm=NONE guifg=#f8f8f0 guibg=#f92672 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Float ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Function ctermfg=<span class="number">148</span> ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Identifier ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> Keyword ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Label ctermfg=<span class="number">186</span> ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> NonText ctermfg=<span class="number">59</span> ctermbg=<span class="number">236</span> cterm=NONE guifg=#<span class="number">49483</span><span class="keyword">e</span> guibg=#<span class="number">31322</span><span class="keyword">c</span> <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Number ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Operator ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> PreProc ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Special ctermfg=<span class="number">231</span> ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> SpecialComment ctermfg=<span class="number">242</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">75715</span><span class="keyword">e</span> guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> SpecialKey ctermfg=<span class="number">59</span> ctermbg=<span class="number">237</span> cterm=NONE guifg=#<span class="number">49483</span><span class="keyword">e</span> guibg=#<span class="number">3</span>c3d37 <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Statement ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> StorageClass ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> String ctermfg=<span class="number">186</span> ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Tag ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Title ctermfg=<span class="number">231</span> ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE <span class="keyword">gui</span>=bold</span><br><span class="line"><span class="keyword">hi</span> Todo ctermfg=<span class="number">95</span> ctermbg=NONE cterm=inverse,bold guifg=#<span class="number">75715</span><span class="keyword">e</span> guibg=NONE <span class="keyword">gui</span>=inverse,bold</span><br><span class="line"><span class="keyword">hi</span> Type ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE <span class="keyword">gui</span>=underline</span><br><span class="line"><span class="keyword">hi</span> rubyClass ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyFunction ctermfg=<span class="number">148</span> ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubySymbol ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyConstant ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> rubyStringDelimiter ctermfg=<span class="number">186</span> ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyBlockParameter ctermfg=<span class="number">208</span> ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> rubyInstanceVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyInclude ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyGlobalVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyRegexp ctermfg=<span class="number">186</span> ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyRegexpDelimiter ctermfg=<span class="number">186</span> ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyEscape ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyControl ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyClassVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyOperator ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyException ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyPseudoVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyRailsUserClass ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> rubyRailsARAssociationMethod ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyRailsARMethod ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyRailsRenderMethod ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> rubyRailsMethod ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> erubyComment ctermfg=<span class="number">95</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">75715</span><span class="keyword">e</span> guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> erubyRailsMethod ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> htmlTag ctermfg=<span class="number">148</span> ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> htmlEndTag ctermfg=<span class="number">148</span> ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> htmlTagName ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> htmlArg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> htmlSpecialChar ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> javaScriptFunction ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> javaScriptRailsFunction ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> yamlKey ctermfg=<span class="number">197</span> ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> yamlAlias ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> yamlDocumentHeader ctermfg=<span class="number">186</span> ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssURL ctermfg=<span class="number">208</span> ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE <span class="keyword">gui</span>=italic</span><br><span class="line"><span class="keyword">hi</span> cssFunctionName ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssColor ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssPseudoClassId ctermfg=<span class="number">148</span> ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssClassName ctermfg=<span class="number">148</span> ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssValueLength ctermfg=<span class="number">141</span> ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssCommonAttr ctermfg=<span class="number">81</span> ctermbg=NONE cterm=NONE guifg=#<span class="number">66</span>d9ef guibg=NONE <span class="keyword">gui</span>=NONE</span><br><span class="line"><span class="keyword">hi</span> cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE <span class="keyword">gui</span>=NONE</span><br></pre></td></tr></table></figure></p>
+<h3 id="vim模版文件"><a href="#vim模版文件" class="headerlink" title="vim模版文件"></a>vim模版文件</h3><p>模版文件有两种方式，一种文件型，一种配置型。文件型需要创建单独的模版文件，虽然配置方便功能强大，但不好管理。</p>
+<p>比如在目录<code>/usr/share/vim/vimfiles/template</code>文件夹下建立一个template.html文件，在<code>~/.vimrc</code>中添加一行<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">autocmd</span> BufNewFile *.java r /usr/share/<span class="keyword">vim</span>/vimfiles/template/tempalate.html</span><br></pre></td></tr></table></figure></p>
+<p>显而易见这句话的意思就是建立后缀为html的文件时，加载定义好的文件。</p>
+<p>第二种是我使用的方式，直接在’.vimrc’文件中定义好要写入的模版</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">AddFileInformation</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">"html"</span></span><br><span class="line">        <span class="keyword">let</span> template = <span class="string">"&lt;!--@date"</span>.<span class="built_in">strftime</span>( <span class="string">"%Y-%m-%d %H:%M"</span> ).<span class="string">"--&gt;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&lt;!doctype&gt;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&lt;html&gt;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&lt;head&gt;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&lt;title&gt;"</span>.<span class="built_in">expand</span>(<span class="string">"%&lt;"</span>).<span class="string">"&lt;/title&gt;"</span>.<span class="string">"\n\n"</span></span><br><span class="line">        \.<span class="string">"&lt;/head&gt;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&lt;body&gt;"</span>.<span class="string">"\n\n\n\n\n"</span></span><br><span class="line">        \.<span class="string">"&lt;/body"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&lt;/html&gt;"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">"java"</span></span><br><span class="line">        <span class="keyword">let</span> template = <span class="string">"//@date "</span>.<span class="built_in">strftime</span>( <span class="string">"%Y-%m-%d %H:%M"</span>).<span class="string">" \n"</span></span><br><span class="line">        \.<span class="string">"import java.util.io"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"public class "</span>.<span class="built_in">expand</span>(<span class="string">"%&lt;"</span>).<span class="string">"&#123;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"    public static void main( String args[] )&#123;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"    //codeing"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"    &#125;"</span>.<span class="string">"\n"</span></span><br><span class="line">        \.<span class="string">"&#125;"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">silent</span> put! = template</span><br><span class="line"></span><br><span class="line"><span class="keyword">endfunction</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">autocmd</span> BufNewFile *.java <span class="keyword">call</span> AddFileInformation()</span><br><span class="line"><span class="keyword">autocmd</span> BufNewFile *.html <span class="keyword">call</span> AddFileInformation()</span><br></pre></td></tr></table></figure>
+<h2 id="编辑器之争"><a href="#编辑器之争" class="headerlink" title="编辑器之争"></a>编辑器之争</h2><p>常年在网络上有一群程序员为此争论，用vim还是IDE。</p>
+<p>我有我的看法，如何让一个没有图形界面的人用IDE呢？这是可笑的，后来有人告诉我，做软件开发的不装图形界面不是没事找事吗？</p>
+<p>比如说我现在写博客，我在windows台式机部署了一个环境，又在我的笔记本部署了，这边写了那边不同步。然后干脆在云服务器上写。之后，iPad都可以随时登录。体验非常好。</p>
+<p>我并非一个vim资深用户，只是在没有IDE的时候用一下。这种感觉非常棒，而在我熟悉后，我并不想打开IDE来开发程序了，其实IDE是很智能的，各种繁琐细节都给你完整配置好了。而其实vim如果你肯花功夫的话，不会比一个IDE复杂。</p>
+<p>就说这么多，这是个好东西。要善加利用。只是一晃眼都已经到了vim80了。网络上的资源鱼龙混杂，一群人抄来抄去，不说来源不讲理由，错了也不知道错了什么。我建议直接寻找vim的README文件一般会在<code>/usr/share/vim/vim-laest/doc/</code>文件下。</p>
+<p>我的系统是macOS 11.13了，只有自己动手丰衣足食吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/52584/" rel="next" title="Macbook恢复出厂设置">
+                <i class="fa fa-chevron-left"></i> Macbook恢复出厂设置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/19966/" rel="prev" title="夜游湘江">
+                夜游湘江 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="彭伟轩" />
+            
+              <p class="site-author-name" itemprop="name">彭伟轩</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="tel:18229738322" target="_blank" title="电话">
+                      
+                        <i class="fa fa-fw fa-phone"></i>电话</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/wexoeng/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://user.qzone.qq.com/1962311496/infocenter" target="_blank" title="QQ空间">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ空间</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/user/home?id=79199600" target="_blank" title="网易音乐">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="../64785" title="博客创建初心" target="_blank">博客创建初心</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="../8436" title="MD使用" target="_blank">MD使用</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-基础操作"><span class="nav-text">vim 基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动光标"><span class="nav-text">移动光标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文字编辑"><span class="nav-text">文字编辑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-高级操作"><span class="nav-text">vim 高级操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查找替换"><span class="nav-text">查找替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分屏"><span class="nav-text">分屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档加密"><span class="nav-text">文档加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义快捷键"><span class="nav-text">自定义快捷键</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-配置文件"><span class="nav-text">vim 配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vim-配色与高亮"><span class="nav-text">vim 配色与高亮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim模版文件"><span class="nav-text">vim模版文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑器之争"><span class="nav-text">编辑器之争</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">彭伟轩</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站一共有：&#58;</span>
+    
+    <span title="全站一共有：">42946 字</span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ADroHFiarWbfu8gAm7EF2520-gzGzoHsz',
+        appKey: 'mswfXHnBHPsjk2PxogkBqaYW',
+        placeholder: '留言内容',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
