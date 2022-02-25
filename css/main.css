@@ -1805,7 +1805,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #577f81;
+  background: #8c2a2e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2668,12 +2668,7 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
-#daodream-container .daodream-powered-by,
-#comments > div.info,
-#comments > div.vpower.txt-right,
-#\35 b5ae9f90b616000312e439a > div > div.vhead > span:nth-child(2),
-#\35 b5ae9f90b616000312e439a > div > div.vhead > span:nth-child(3),
-.v .vlist .vcard .vhead .vsys {
+vpower txt-right {
   display: none;
 }
 #daodream-container .daodream-launcher-enabled {
