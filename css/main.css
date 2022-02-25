@@ -1805,7 +1805,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b5e467;
+  background: #fbc371;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2675,6 +2675,9 @@ embed {
   display: none;
 }
 #comments > div.vpower.txt-right {
+  display: none;
+}
+.v[data-class="v"] .txt-right {
   display: none;
 }
 #daodream-container .daodream-launcher-enabled {
